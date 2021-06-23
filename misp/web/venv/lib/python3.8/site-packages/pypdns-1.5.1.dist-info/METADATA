@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pypdns
+Version: 1.5.1
+Summary: Python API for PDNS.
+Home-page: https://github.com/CIRCL/PyPDNS
+License: GPL-3.0+
+Author: Raphaël Vinot
+Author-email: raphael.vinot@circl.lu
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Requires-Dist: requests-cache (>=0.5.2,<0.6.0)
+Project-URL: Bug Tracker, https://github.com/CIRCL/PyPDNS/issues
+Project-URL: Documentation, https://github.com/CIRCL/PyPDNS
+Project-URL: Repository, https://github.com/CIRCL/PyPDNS
+Description-Content-Type: text/markdown
+
+Client API for PDNS
+===================
+
+Client API to query any Passive DNS implementation following the Passive DNS - Common Output Format.
+
+* https://datatracker.ietf.org/doc/draft-dulaunoy-dnsop-passive-dns-cof/
+
+Example
+=======
+
+~~~~
+import pypdns
+x = pypdns.PyPDNS(basic_auth=('username','yourpassword'))
+print (x.query('www.microsoft.com')[0]['rdata'])
+~~~~
+
+Passive DNS Services
+====================
+
+* (default) [CIRCL Passive DNS](http://www.circl.lu/services/passive-dns/)
+
+
+

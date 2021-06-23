@@ -1,0 +1,43 @@
+Metadata-Version: 2.0
+Name: sigmatools
+Version: 0.18.1
+Summary: Tools for the Generic Signature Format for SIEM Systems
+Home-page: https://github.com/Neo23x0/sigma
+Author: Sigma Project
+Author-email: thomas@patzke.org
+License: LGPLv3
+Keywords: security monitoring siem logging signatures elasticsearch splunk ids sysmon
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Security
+Classifier: Topic :: Internet :: Log Analysis
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Environment :: Console
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: PyYAML
+Requires-Dist: pymisp
+Requires-Dist: progressbar2
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: yamllint; extra == 'test'
+
+# Sigma Tools
+
+This package contains the following tools for [Sigma](https://github.com/Neo23x0/sigma):
+
+* sigmac: the Sigma converter
+* merge_sigma: Merge a Sigma collection into a minimal set of Sigma rules
+* sigma2misp: Import Sigma rules into MISP
+* sigma2attack: Create a MITRE ATT&CK coverage map
+* sigma_similarity: Measure similarity of Sigma rules
+* sigma_uuid: Check Sigma identifiers
+
+

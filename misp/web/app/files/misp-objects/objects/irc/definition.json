@@ -1,0 +1,76 @@
+{
+  "attributes": {
+    "channel": {
+      "description": "IRC channel associated to the IRC server",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "dst-port": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Destination port to reach the IRC server",
+      "disable_correlation": true,
+      "misp-attribute": "port",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "first-seen": {
+      "description": "First time the IRC server with the associated channels has been seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "hostname": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Hostname of the IRC server",
+      "misp-attribute": "hostname",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "ip": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "IP address of the IRC server",
+      "misp-attribute": "ip-dst",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "last-seen": {
+      "description": "Last time the IRC server with the associated channels has been seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "nickname": {
+      "description": "IRC nickname used to connect to the associated IRC server and channels",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "text": {
+      "description": "Description of the IRC server",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "An IRC object to describe an IRC server and the associated channels.",
+  "meta-category": "network",
+  "name": "irc",
+  "requiredOneOf": [
+    "ip",
+    "hostname",
+    "channel",
+    "nickname"
+  ],
+  "uuid": "4bbbc004-c344-4b20-8672-b41102177fc7",
+  "version": 2
+}

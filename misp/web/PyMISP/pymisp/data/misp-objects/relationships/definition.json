@@ -1,0 +1,1154 @@
+{
+  "description": "Default type of relationships in MISP objects.",
+  "name": "relationships",
+  "uuid": "b002c0d6-320f-450d-82c4-b3aa15bbbd6c",
+  "values": [
+    {
+      "description": "The information in the target object is based on information from the source object.",
+      "format": [
+        "misp",
+        "stix-2.0",
+        "alfred"
+      ],
+      "name": "derived-from"
+    },
+    {
+      "description": "This relationship describes an object which executes another object",
+      "format": [
+        "misp"
+      ],
+      "name": "executes"
+    },
+    {
+      "description": "The referenced source and target objects are semantically duplicates of each other.",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "duplicate-of"
+    },
+    {
+      "description": "The referenced source is related to the target object.",
+      "format": [
+        "alfred",
+        "followthemoney",
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "related-to"
+    },
+    {
+      "description": "The referenced source is connected to the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "connected-to",
+      "opposite": "connected-from"
+    },
+    {
+      "description": "The referenced source is connected from the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "connected-from",
+      "opposite": "connected-to"
+    },
+    {
+      "description": "The referenced source is containing the target object.",
+      "format": [
+        "misp",
+        "stix-1.1",
+        "alfred"
+      ],
+      "name": "contains",
+      "opposite": "contained-by"
+    },
+    {
+      "description": "The referenced source is contained by the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "contained-by",
+      "opposite": "contains"
+    },
+    {
+      "description": "The referenced source is contained within the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "contained-within"
+    },
+    {
+      "description": "The referenced source is characterized by the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "characterized-by",
+      "opposite": "characterizes"
+    },
+    {
+      "description": "The referenced source is characterizing the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "characterizes",
+      "opposite": "characterized-by"
+    },
+    {
+      "description": "The referenced source has queried the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "properties-queried",
+      "opposite": "properties-queried-by"
+    },
+    {
+      "description": "The referenced source is queried by the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "properties-queried-by",
+      "opposite": "properties-queried"
+    },
+    {
+      "description": "The referenced source is extracted from the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "extracted-from"
+    },
+    {
+      "description": "The referenced source is a supra domain of the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "supra-domain-of",
+      "opposite": "sub-domain-of"
+    },
+    {
+      "description": "The referenced source is a sub domain of the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "sub-domain-of",
+      "opposite": "supra-domain-of"
+    },
+    {
+      "description": "The referenced source has dropped the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "dropped"
+    },
+    {
+      "description": "The referenced source is dropped by the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "dropped-by"
+    },
+    {
+      "description": "The referenced source has downloaded the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "downloaded",
+      "opposite": "downloaded-from"
+    },
+    {
+      "description": "The referenced source has been downloaded from the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "downloaded-from",
+      "opposite": "downloaded"
+    },
+    {
+      "description": "The referenced source is resolved to the target object.",
+      "format": [
+        "misp",
+        "stix-1.1"
+      ],
+      "name": "resolved-to"
+    },
+    {
+      "description": "This referenced source is attributed to the target object.",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "attributed-to"
+    },
+    {
+      "description": "This relationship describes that the source object targets the target object.",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "targets"
+    },
+    {
+      "description": "This relationship describes the use by the source object of the target object.",
+      "format": [
+        "misp",
+        "stix-2.0",
+        "alfred"
+      ],
+      "name": "uses",
+      "opposite": "used-by"
+    },
+    {
+      "description": "This relationship describes that the source object indicates the target object.",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "indicates"
+    },
+    {
+      "description": "This relationship describes that the source object mentions the target object.",
+      "format": [
+        "misp"
+      ],
+      "name": "mentions"
+    },
+    {
+      "description": "This relationship describes a source object which mitigates the target object.",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "mitigates"
+    },
+    {
+      "description": "This relationship describes a source object which is a variant of the target object",
+      "format": [
+        "misp",
+        "stix-2.0",
+        "alfred"
+      ],
+      "name": "variant-of"
+    },
+    {
+      "description": "This relationship describes a source object which impersonates the target object",
+      "format": [
+        "misp",
+        "stix-2.0"
+      ],
+      "name": "impersonates"
+    },
+    {
+      "description": "This relationship describes an object retrieved from the target object.",
+      "format": [
+        "misp"
+      ],
+      "name": "retrieved-from"
+    },
+    {
+      "description": "This relationship describes the author of a specific object.",
+      "format": [
+        "misp"
+      ],
+      "name": "authored-by",
+      "opposite": "is-author-of"
+    },
+    {
+      "description": "This relationship describes an object being author by someone.",
+      "format": [
+        "misp"
+      ],
+      "name": "is-author-of",
+      "opposite": "authored-by"
+    },
+    {
+      "description": "This relationship describes the location (of any type) of a specific object.",
+      "format": [
+        "misp"
+      ],
+      "name": "located"
+    },
+    {
+      "description": "This relationship describes an object included in another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "included-in",
+      "opposite": "includes"
+    },
+    {
+      "description": "This relationship describes an object that includes an other object.",
+      "format": [
+        "misp"
+      ],
+      "name": "includes",
+      "opposite": "included-in"
+    },
+    {
+      "description": "This relationship describes an object analysed by another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "analysed-with"
+    },
+    {
+      "description": "This relationship describes an object claimed by another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "claimed-by"
+    },
+    {
+      "description": "This relationship describes an object communicating with another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "communicates-with"
+    },
+    {
+      "description": "This relationship describes an object which drops another object",
+      "format": [
+        "misp"
+      ],
+      "name": "drops"
+    },
+    {
+      "description": "This relationship describes an object executed by another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "executed-by"
+    },
+    {
+      "description": "This relationship describes an object affected by another object.",
+      "format": [
+        "misp",
+        "alfred"
+      ],
+      "name": "affects"
+    },
+    {
+      "description": "This relationship describes an object beaconing to another object.",
+      "format": [
+        "misp",
+        "alfred"
+      ],
+      "name": "beacons-to"
+    },
+    {
+      "description": "This relationship describes an object which abuses another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "abuses"
+    },
+    {
+      "description": "This relationship describes an object exfiltrating to another object.",
+      "format": [
+        "misp",
+        "alfred"
+      ],
+      "name": "exfiltrates-to"
+    },
+    {
+      "description": "This relationship describes an object which identifies another object.",
+      "format": [
+        "misp",
+        "alfred"
+      ],
+      "name": "identifies"
+    },
+    {
+      "description": "This relationship describes an object which intercepts another object.",
+      "format": [
+        "misp",
+        "alfred"
+      ],
+      "name": "intercepts"
+    },
+    {
+      "description": "This relationship describes an object which calls another objects.",
+      "format": [
+        "misp"
+      ],
+      "name": "calls"
+    },
+    {
+      "description": "This relationship describes an object which is detected as another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "detected-as"
+    },
+    {
+      "description": "This relationship describes an object which is followed by another object. This can be used when a time reference is missing but a sequence is known.",
+      "format": [
+        "misp"
+      ],
+      "name": "followed-by",
+      "opposite": "preceding-by"
+    },
+    {
+      "description": "This relationship describes an object which is preceded by another object. This can be used when a time reference is missing but a sequence is known.",
+      "format": [
+        "misp"
+      ],
+      "name": "preceding-by",
+      "opposite": "followed-by"
+    },
+    {
+      "description": "This relationship describes an object which triggers another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "triggers"
+    },
+    {
+      "description": "This relationship describes an object which is a vulnerability of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "vulnerability-of"
+    },
+    {
+      "description": "This relationship describes an object which works like another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "works-like"
+    },
+    {
+      "description": "This relationship describes an object which is selling another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "seller-of"
+    },
+    {
+      "description": "This relationship describes an object which is selling on another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "seller-on"
+    },
+    {
+      "description": "This relationship describes an object which is trying to obtain the exploit described by another object",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "trying-to-obtain-the-exploit"
+    },
+    {
+      "description": "This relationship describes an object which is used by another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "used-by",
+      "opposite": "uses"
+    },
+    {
+      "description": "This relationship describes an object which is affiliated with another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "affiliated"
+    },
+    {
+      "description": "This relationship describes an object which is the alleged founder of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "alleged-founder-of"
+    },
+    {
+      "description": "This relationship describes an object which attacks another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "attacking-other-group"
+    },
+    {
+      "description": "This relationship describes an object which belongs to another object.",
+      "format": [
+        "cert-eu",
+        "followthemoney"
+      ],
+      "name": "belongs-to"
+    },
+    {
+      "description": "This relationship describes an object which has business relations with another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "business-relations"
+    },
+    {
+      "description": "This relationship describes an object which claims to be the founder of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "claims-to-be-the-founder-of"
+    },
+    {
+      "description": "This relationship describes an object which cooperates with another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "cooperates-with"
+    },
+    {
+      "description": "This relationship describes an object which is a former member of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "former-member-of"
+    },
+    {
+      "description": "This relationship describes an object which is a successor of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "successor-of"
+    },
+    {
+      "description": "This relationship describes an object which has joined another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "has-joined"
+    },
+    {
+      "description": "This relationship describes an object which is a member of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "member-of"
+    },
+    {
+      "description": "This relationship describes an object which is a primary member of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "primary-member-of"
+    },
+    {
+      "description": "This relationship describes an object which is an administrator of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "administrator-of"
+    },
+    {
+      "description": "This relationship describes an object which is in relation with another object,",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "is-in-relation-with"
+    },
+    {
+      "description": "This relationship describes an object which provides support to another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "provide-support-to"
+    },
+    {
+      "description": "This relationship describes an object which is a regional branch of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "regional-branch"
+    },
+    {
+      "description": "This relationship describes an object which is similar to another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "similar"
+    },
+    {
+      "description": "This relationship describes an object which is a subgroup of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "subgroup"
+    },
+    {
+      "description": "This relationship describes an object which is suspected to be linked with another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "suspected-link"
+    },
+    {
+      "description": "This relationship describes an object which is the same as another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "same-as"
+    },
+    {
+      "description": "This relationship describes an object which is the creator of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "creator-of"
+    },
+    {
+      "description": "This relationship describes an object which is a developer of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "developer-of"
+    },
+    {
+      "description": "This relationship describes an object which uses another object for recon.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "uses-for-recon"
+    },
+    {
+      "description": "This relationship describes an object which is an operator of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "operator-of"
+    },
+    {
+      "description": "This relationship describes an object which overlaps another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "overlaps"
+    },
+    {
+      "description": "This relationship describes an object which owns another object.",
+      "format": [
+        "cert-eu",
+        "alfred"
+      ],
+      "name": "owner-of"
+    },
+    {
+      "description": "This relationship describes an object which publishes method for another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "publishes-method-for"
+    },
+    {
+      "description": "This relationship describes an object which recommends the use of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "recommends-use-of"
+    },
+    {
+      "description": "This relationship describes an object which released source code of another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "released-source-code"
+    },
+    {
+      "description": "This relationship describes an object which release another object.",
+      "format": [
+        "cert-eu"
+      ],
+      "name": "released"
+    },
+    {
+      "description": "This relationship describes an object (like a PoC/exploit) which exploits another object (such as a vulnerability object).",
+      "format": [
+        "misp"
+      ],
+      "name": "exploits"
+    },
+    {
+      "description": "This relationship describes an object signed by another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "signed-by"
+    },
+    {
+      "description": "This relationship describes an object by another object (such as exploit kit, dropper).",
+      "format": [
+        "misp"
+      ],
+      "name": "delivered-by"
+    },
+    {
+      "description": "This relationship describes an object which controls another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "controls"
+    },
+    {
+      "description": "This relationships describes an object which annotates another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "annotates"
+    },
+    {
+      "description": "This relationships describes an object which references another object or attribute.",
+      "format": [
+        "misp"
+      ],
+      "name": "references"
+    },
+    {
+      "description": "A child semantic link to a parent.",
+      "format": [
+        "alfred"
+      ],
+      "name": "child-of"
+    },
+    {
+      "description": "Represents the semantic link of having compromised something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "compromised"
+    },
+    {
+      "description": "The initiator of a connection.",
+      "format": [
+        "alfred"
+      ],
+      "name": "connects"
+    },
+    {
+      "description": "The destination or target of a connection.",
+      "format": [
+        "alfred"
+      ],
+      "name": "connects-to"
+    },
+    {
+      "description": "Represents the semantic link of one thing being the cover term for another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "cover-term-for"
+    },
+    {
+      "description": "Semantic link indicating where information is disclosed to.",
+      "format": [
+        "alfred"
+      ],
+      "name": "disclosed-to"
+    },
+    {
+      "description": "Represents the semantic link of one thing downloading another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "downloads",
+      "opposite": "downloads-from"
+    },
+    {
+      "description": "Represents the semantic link of malware being downloaded from a location.",
+      "format": [
+        "alfred"
+      ],
+      "name": "downloads-from",
+      "opposite": "downloads"
+    },
+    {
+      "description": "Represents the semantic link of an alert generated from a signature.",
+      "format": [
+        "alfred"
+      ],
+      "name": "generated"
+    },
+    {
+      "description": "One data object implements another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "implements"
+    },
+    {
+      "description": "Represents the semantic link of a communication initiating an event.",
+      "format": [
+        "alfred"
+      ],
+      "name": "initiates"
+    },
+    {
+      "description": "Represents the semantic link between a FILE and FILE_BINARY.",
+      "format": [
+        "alfred"
+      ],
+      "name": "instance-of"
+    },
+    {
+      "description": "Represents the semantic link of being the issuer of something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "issuer-of"
+    },
+    {
+      "description": "Represents the semantic link of being associated with something.",
+      "format": [
+        "alfred",
+        "followthemoney"
+      ],
+      "name": "linked-to"
+    },
+    {
+      "description": "Represents the semantic link of a comm that is not relevant to an EVENT.",
+      "format": [
+        "alfred"
+      ],
+      "name": "not-relevant-to"
+    },
+    {
+      "description": "Represents the semantic link that defines one thing to be part of another in a hierachial structure from the child to the parent.",
+      "format": [
+        "alfred"
+      ],
+      "name": "part-of"
+    },
+    {
+      "description": "Represents the semantic link of something has been processed by another program.",
+      "format": [
+        "alfred"
+      ],
+      "name": "processed-by"
+    },
+    {
+      "description": "Represents the semantic link of something having produced something else.",
+      "format": [
+        "alfred"
+      ],
+      "name": "produced"
+    },
+    {
+      "description": "The IP Address or domain being queried for.",
+      "format": [
+        "alfred"
+      ],
+      "name": "queried-for"
+    },
+    {
+      "description": "The IP Address or domain returned as the result of a query.",
+      "format": [
+        "alfred"
+      ],
+      "name": "query-returned"
+    },
+    {
+      "description": "Represents the semantic link of someone registered some thing.",
+      "format": [
+        "alfred"
+      ],
+      "name": "registered",
+      "opposite": "registered-to"
+    },
+    {
+      "description": "Represents the semantic link of something being registered to.",
+      "format": [
+        "alfred"
+      ],
+      "name": "registered-to",
+      "opposite": "registered"
+    },
+    {
+      "description": "Represents the semantic link between HBS Comms and communication addresses.",
+      "format": [
+        "alfred"
+      ],
+      "name": "relates"
+    },
+    {
+      "description": "Represents the semantic link of a comm that is relevant to an EVENT.",
+      "format": [
+        "alfred"
+      ],
+      "name": "relevant-to"
+    },
+    {
+      "description": "Represents the semantic link of resolving to something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "resolves-to"
+    },
+    {
+      "description": "Represents the semantic link of some entity being responsible for something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "responsible-for"
+    },
+    {
+      "description": "Represents the semantic link of a seeded domain redirecting to another site.",
+      "format": [
+        "alfred"
+      ],
+      "name": "seeded"
+    },
+    {
+      "description": "A sends semantic link meaning 'who sends what'.",
+      "format": [
+        "alfred"
+      ],
+      "name": "sends"
+    },
+    {
+      "description": "A sends to as BCC semantic link meaning 'what sends to who as BCC'.",
+      "format": [
+        "alfred"
+      ],
+      "name": "sends-as-bcc-to"
+    },
+    {
+      "description": "A sends to as CC semantic link meaning 'what sends to who as CC'.",
+      "format": [
+        "alfred"
+      ],
+      "name": "sends-as-cc-to"
+    },
+    {
+      "description": "A sends to semantic link meaning 'what sends to who'.",
+      "format": [
+        "alfred"
+      ],
+      "name": "sends-to"
+    },
+    {
+      "description": "The represents the semantic link of having spoofed something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "spoofer-of"
+    },
+    {
+      "description": "Represents a domain being a subdomain of another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "subdomain-of"
+    },
+    {
+      "description": "One data object supersedes another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "supersedes"
+    },
+    {
+      "description": "Represents the semantic link of an alert triggered on an event.",
+      "format": [
+        "alfred"
+      ],
+      "name": "triggered-on"
+    },
+    {
+      "description": "Represents the semantic link of one thing uploading another.",
+      "format": [
+        "alfred"
+      ],
+      "name": "uploads"
+    },
+    {
+      "description": "The represents the semantic link of being the user of something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "user-of"
+    },
+    {
+      "description": "Represents the semantic link of working for something.",
+      "format": [
+        "alfred"
+      ],
+      "name": "works-for"
+    },
+    {
+      "description": "Represents an object being a witness of something.",
+      "format": [
+        "misp"
+      ],
+      "name": "witness-of"
+    },
+    {
+      "description": "Represents an object injecting something into something",
+      "format": [
+        "misp"
+      ],
+      "name": "injects-into"
+    },
+    {
+      "description": "Represents an object which is injected something into something",
+      "format": [
+        "misp"
+      ],
+      "name": "injected-into"
+    },
+    {
+      "description": "Represents an object that creates something.",
+      "format": [
+        "misp",
+        "haxpak"
+      ],
+      "name": "creates"
+    },
+    {
+      "description": "Represents an object being the screenshot of something.",
+      "format": [
+        "misp"
+      ],
+      "name": "screenshot-of"
+    },
+    {
+      "description": "Represents an object having the knowledge of another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "knows"
+    },
+    {
+      "description": "Represents the semantic link of describing another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "describes"
+    },
+    {
+      "description": "Represents the semantic link of extending another object.",
+      "format": [
+        "misp"
+      ],
+      "name": "extends"
+    },
+    {
+      "description": "Reprensents an object which writes towards another object or attribute",
+      "format": [
+        "misp"
+      ],
+      "name": "writes"
+    },
+    {
+      "description": "Represents the semantic link of an asn object being ranked with a bgp-ranking object",
+      "format": [
+        "misp"
+      ],
+      "name": "ranked-with"
+    },
+    {
+      "description": "owns",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "owns"
+    },
+    {
+      "description": "awarded-to",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "awarded-to"
+    },
+    {
+      "description": "directs",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "directs"
+    },
+    {
+      "description": "involved-in",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "involved-in"
+    },
+    {
+      "description": "associated-with",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "associated-with"
+    },
+    {
+      "description": "represents",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "represents"
+    },
+    {
+      "description": "owes",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "owes"
+    },
+    {
+      "description": "preceeds",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "preceeds"
+    },
+    {
+      "description": "documents",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "documents"
+    },
+    {
+      "description": "paid",
+      "format": [
+        "followthemoney"
+      ],
+      "name": "paid"
+    },
+    {
+      "description": "leaks",
+      "format": [
+        "misp"
+      ],
+      "name": "leaks",
+      "opposite": "leaked-by"
+    },
+    {
+      "description": "leaked-by",
+      "format": [
+        "misp"
+      ],
+      "name": "leaked-by",
+      "opposite": "leaks"
+    },
+    {
+      "description": "doxed-by",
+      "format": [
+        "misp"
+      ],
+      "name": "doxed-by"
+    }
+  ],
+  "version": 22
+}

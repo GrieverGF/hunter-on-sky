@@ -1,0 +1,49 @@
+{
+  "attributes": {
+    "comments": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "executable-file-name": {
+      "description": "Name of the executable file.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "key": {
+      "description": "Software hive key where the information is retrieved from.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "last-write-time": {
+      "description": "Date and time when the key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "path": {
+      "description": "Path of the executable file.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "references": {
+      "description": "References to the application installed.",
+      "misp-attribute": "link",
+      "multiple": true,
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to gather information of the application paths.",
+  "meta-category": "misc",
+  "name": "regripper-software-hive-application-paths",
+  "required": [
+    "key",
+    "executable-file-name",
+    "path"
+  ],
+  "uuid": "9f2d3c9b-9a82-42a7-82c2-733115d101c8",
+  "version": 1
+}

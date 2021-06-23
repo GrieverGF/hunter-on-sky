@@ -1,0 +1,55 @@
+{
+  "attributes": {
+    "command": {
+      "description": "Command executed.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "comments": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "key": {
+      "description": "Software hive key where the information is retrieved from.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "last-write-time": {
+      "description": "Date and time when the key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "shell": {
+      "description": "Type of shell used to execute the command.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "exe",
+        "cmd",
+        "bat",
+        "hta",
+        "pif",
+        "Other"
+      ],
+      "ui-priority": 0
+    },
+    "shell-path": {
+      "description": "Path of the shell.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to gather information of the shell commands executed on the system.",
+  "meta-category": "misc",
+  "name": "regripper-software-hive-command-shell",
+  "required": [
+    "key",
+    "shell",
+    "shell-path"
+  ],
+  "uuid": "a7dc3697-89ce-46dc-a64d-0b1015457978",
+  "version": 1
+}

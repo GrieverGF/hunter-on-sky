@@ -1,0 +1,57 @@
+{
+  "attributes": {
+    "app-last-write-time": {
+      "description": "Date and time when the application key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "app-name": {
+      "description": "Name of the application.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "comments": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "key": {
+      "description": "Software hive key where the information is retrieved from.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "key-path": {
+      "description": "Path of the key.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "last-write-time": {
+      "description": "Date and time when the key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "references": {
+      "description": "References to the application installed.",
+      "misp-attribute": "link",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "version": {
+      "description": "Version of the application.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to gather information of the applications installed on the system.",
+  "meta-category": "misc",
+  "name": "regripper-software-hive-applications-installed",
+  "required": [
+    "key",
+    "app-name"
+  ],
+  "uuid": "7a8fb6b4-cbbd-4de5-b893-7b0a5c4858cd",
+  "version": 1
+}

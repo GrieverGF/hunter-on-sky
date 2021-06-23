@@ -1,0 +1,160 @@
+{
+  "attributes": {
+    "AutoAdminLogon": {
+      "description": "Flag value to determine if autologon is enabled for a user without entering the password.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "AutoRestartShell": {
+      "description": "Value of the flag set to auto restart the shell if it crashes or shuts down automatically.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "CachedLogonCount": {
+      "description": "Number of times the user has logged into the system.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "Comments": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "DefaultUserName": {
+      "description": "user-name of the default user.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "DisableCAD": {
+      "description": "Flag to determine if user login is enabled by pressing Ctrl+ALT+Delete.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "Legal-notice-caption": {
+      "description": "Message title set to display when the user logs-in.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "Legal-notice-text": {
+      "description": "Message set to display when the user logs-in.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "PasswordExpiryWarining": {
+      "description": "Number of times the password expiry warning appeared.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "PowerdownAfterShutDown": {
+      "description": "Flag value- if the system is set to power down after it is shutdown.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "PreCreateKnownFolders": {
+      "description": "create known folders key",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "ReportBootOk": {
+      "description": "Flag to check if the reboot was successful.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "SID": {
+      "description": "Security identifier assigned to the user profile.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "Shell": {
+      "description": "Shell set to run when the user logs onto the system.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "ShutdownFlags": {
+      "description": "Number of times shutdown is initiated from a process when the user is logged-in.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "ShutdownWithoutLogon": {
+      "description": "Value of the flag set to enable shutdown without requiring a user to login.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "UserInit": {
+      "description": "Applications and files set to run when the user logs onto the system (User logon activity).",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "WinStationsDisabled": {
+      "description": "Flag value set to enable/disable logons to the system.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "user-profile-key-last-write-time": {
+      "description": "Date and time when the key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "user-profile-key-path": {
+      "description": "key where the user-profile information is retrieved from.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "user-profile-last-write-time": {
+      "description": "Date and time when the user profile was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "user-profile-path": {
+      "description": "Path of the user profile on the system",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "winlogon-key-last-write-time": {
+      "description": "Date and time when the winlogon key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "winlogon-key-path": {
+      "description": "winlogon key referred in order to retrieve default user information",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to gather user profile information when the user logs onto the system, gathered from the software hive.",
+  "meta-category": "misc",
+  "name": "regripper-software-hive-userprofile-winlogon",
+  "required": [
+    "user-profile-key-path",
+    "SID"
+  ],
+  "uuid": "df03d0e4-3e6b-4e56-951a-142eae4cad59",
+  "version": 1
+}

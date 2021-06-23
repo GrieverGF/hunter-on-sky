@@ -1,0 +1,44 @@
+{
+  "attributes": {
+    "credential": {
+      "description": "Credential (username, password)",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "domain": {
+      "description": "Full domain",
+      "misp-attribute": "domain",
+      "ui-priority": 0
+    },
+    "first-seen": {
+      "description": "First time this shortened URL has been seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "redirect-url": {
+      "description": "Redirected to URL",
+      "misp-attribute": "url",
+      "ui-priority": 1
+    },
+    "shortened-url": {
+      "description": "Shortened URL",
+      "misp-attribute": "url",
+      "ui-priority": 1
+    },
+    "text": {
+      "description": "Description and context of the shortened URL ",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Shortened link and its redirect target",
+  "meta-category": "network",
+  "name": "shortened-link",
+  "required": [
+    "redirect-url",
+    "shortened-url"
+  ],
+  "uuid": "361c0ae8-68bd-11e8-adc0-fa7ae01bbebc",
+  "version": 2018060501
+}

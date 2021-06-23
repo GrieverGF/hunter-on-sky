@@ -1,0 +1,176 @@
+{
+  "attributes": {
+    "args": {
+      "description": "Arguments of the process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "child-pid": {
+      "description": "Process ID of the child(ren) process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "command-line": {
+      "description": "Command line of the process",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "creation-time": {
+      "description": "Local date/time at which the process was created",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "current-directory": {
+      "description": "Current working directory of the process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 2
+    },
+    "fake-process-name": {
+      "description": "Is the process spawned under a false name.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "multiple": false,
+      "sane_default": [
+        "1",
+        "0"
+      ],
+      "ui-priority": 1
+    },
+    "guid": {
+      "description": "The globally unique identifier of the assigned by the vendor product",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "hidden": {
+      "description": "Specifies whether the process is hidden",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 1
+    },
+    "image": {
+      "description": "Path of process image",
+      "misp-attribute": "filename",
+      "ui-priority": 1
+    },
+    "integrity-level": {
+      "description": "Integrity level of the process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "system",
+        "high",
+        "medium",
+        "low",
+        "untrusted"
+      ],
+      "ui-priority": 2
+    },
+    "name": {
+      "description": "Name of the process",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "parent-command-line": {
+      "description": "Command line of the parent process",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "parent-guid": {
+      "description": "The globally unique idenifier of the parent process assigned by the vendor product",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "parent-image": {
+      "description": "Path of parent process image",
+      "misp-attribute": "filename",
+      "ui-priority": 1
+    },
+    "parent-pid": {
+      "description": "Process ID of the parent process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "parent-process-name": {
+      "description": "Process name of the parent",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "parent-process-path": {
+      "description": "Parent process path of the parent",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "pgid": {
+      "description": "Identifier of the group of processes the process belong to",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "pid": {
+      "description": "Process ID of the process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "port": {
+      "description": "Port(s) owned by the process",
+      "disable_correlation": true,
+      "misp-attribute": "port",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "process-state": {
+      "description": "State of process.",
+      "disable_correlation": true,
+      "misp-attribute": "process-state",
+      "multiple": false,
+      "sane_default": [
+        "D",
+        "R",
+        "S",
+        "T",
+        "t",
+        "W",
+        "X",
+        "Z",
+        "<",
+        "N",
+        "L",
+        "s",
+        "l",
+        "+"
+      ],
+      "ui-priority": 1
+    },
+    "start-time": {
+      "description": "Local date/time at which the process was started",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "user": {
+      "description": "User context of the process",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 2
+    }
+  },
+  "description": "Object describing a system process.",
+  "meta-category": "misc",
+  "name": "process",
+  "requiredOneOf": [
+    "name",
+    "pid",
+    "image",
+    "command-line",
+    "current-directory"
+  ],
+  "uuid": "02aeef94-ac23-455c-addb-731757ceafb5",
+  "version": 8
+}

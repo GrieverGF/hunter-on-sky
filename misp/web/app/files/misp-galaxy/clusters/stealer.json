@@ -1,0 +1,82 @@
+{
+  "authors": [
+    "raw-data"
+  ],
+  "category": "tool",
+  "description": "A list of malware stealer.",
+  "name": "Stealer",
+  "source": "Open Sources",
+  "type": "stealer",
+  "uuid": "f2ef4033-9001-4427-a418-df8c48e6d054",
+  "values": [
+    {
+      "description": "It is designed to steal data found within multiple Chromium and Firefox based browsers, it can also steal many popular cryptocurrency wallets as well as any saved FTP passwords within FileZilla. Nocturnal Stealer uses several anti-VM and anti-analysis techniques, which include but are not limited to: environment fingerprinting, checking for debuggers and analyzers, searching for known virtual machine registry keys, and checking for emulation software.",
+      "meta": {
+        "date": "March 2018.",
+        "refs": [
+          "https://www.proofpoint.com/us/threat-insight/post/thief-night-new-nocturnal-stealer-grabs-data-cheap",
+          "https://www.bleepingcomputer.com/news/security/hookads-malvertising-installing-malware-via-the-fallout-exploit-kit/",
+          "https://traffic.moe/2018/11/10/index.html"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "94793dbc-3649-40a4-9ccc-1b32846ecb3a",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "e7080bce-99b5-4615-a798-a192ed89bd5a",
+      "value": "Nocturnal Stealer"
+    },
+    {
+      "description": "The first version stole browser credentials and cookies, along with all text files it can find on the system. The second variant added the ability to collect Telegram's desktop cache and key files, as well as login information for the video game storefront Steam.",
+      "meta": {
+        "date": "March 2018.",
+        "refs": [
+          "https://blog.talosintelligence.com/2018/05/telegrab.html"
+        ]
+      },
+      "uuid": "a6780288-24eb-4006-9ddd-062870c6feec",
+      "value": "TeleGrab"
+    },
+    {
+      "description": "It is able to steal accounts from different software, such as, Firefox password Internet Explorer/Edge Thunderbird Chrome/Chromium and many more. It is also able to (1) list all installed software, (2) list processes, (3) Get information about the machine name (CPU type, Graphic card, size of memory), (4) take screen captures, (5) Steal cryptomoney wallet from Electrum, MultiBit, monero-project, bitcoin-qt.",
+      "meta": {
+        "date": "July 2018.",
+        "refs": [
+          "https://www.proofpoint.com/us/threat-insight/post/threat-actors-using-legitimate-paypal-accounts-to-distribute-chthonic-banking-trojan",
+          "https://blog.minerva-labs.com/analyzing-an-azorult-attack-evasion-in-a-cloak-of-multiple-layers",
+          "https://malware.lu/articles/2018/05/04/azorult-stealer.html"
+        ]
+      },
+      "uuid": "a646edab-5c6f-4a79-8a6c-153535259e16",
+      "value": "AZORult"
+    },
+    {
+      "description": "Vidar is a forked malware based on Arkei. It seems this stealer is one of the first that is grabbing information on 2FA Software and Tor Browser.",
+      "meta": {
+        "date": "Dec 2018.",
+        "refs": [
+          "https://malpedia.caad.fkie.fraunhofer.de/details/win.vidar"
+        ]
+      },
+      "uuid": "045ab0d5-2f08-4fcd-af47-81c1143fa5fb",
+      "value": "Vidar"
+    },
+    {
+      "description": "Information stealer which uses AutoIT for wrapping.",
+      "meta": {
+        "date": "Jan 2019.",
+        "refs": [
+          "https://blog.yoroi.company/research/the-ave_maria-malware/"
+        ]
+      },
+      "uuid": "f3413f6c-5c3a-4df0-bbb5-2dbdf4d68c4c",
+      "value": "Ave Maria"
+    }
+  ],
+  "version": 7
+}

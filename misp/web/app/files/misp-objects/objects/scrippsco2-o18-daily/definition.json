@@ -1,0 +1,53 @@
+{
+  "attributes": {
+    "flag": {
+      "description": "Flag (see taxonomy for details).",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "number-flask": {
+      "description": "Number of flasks used in daily average.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 1
+    },
+    "o18-value": {
+      "description": "O18 value (ppm) - O18 concentrations are measured on the '08A' Calibration Scale",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-excel": {
+      "description": "M$Excel spreadsheet date format.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-fractional": {
+      "description": "Decimal year and fractional year.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-datetime": {
+      "description": "Datetime the sample has been taken",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    }
+  },
+  "description": "Daily average O18 concentrations (ppm) derived from flask air samples.",
+  "meta-category": "climate",
+  "name": "scrippsco2-o18-daily",
+  "requiredOneOf": [
+    "sample-datetime",
+    "sample-date-excel",
+    "sample-date-fractional",
+    "number-flask",
+    "flag",
+    "o18-value"
+  ],
+  "uuid": "8b6878a7-577d-4845-b165-ead6e58bec04",
+  "version": 2
+}

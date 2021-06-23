@@ -1,0 +1,61 @@
+{
+  "attributes": {
+    "description": {
+      "description": "Description",
+      "disable_correlation": true,
+      "misp-attribute": "comment",
+      "ui-priority": 0
+    },
+    "drill-down": {
+      "description": "Drilldown",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "earliest": {
+      "description": "Earliest time",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "latest": {
+      "description": "Latest time",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "response-action": {
+      "description": "Response action",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "sane_default": [
+        "notable",
+        "risk"
+      ],
+      "ui-priority": 0
+    },
+    "schedule": {
+      "description": "Schedule",
+      "disable_correlation": true,
+      "misp-attribute": "other",
+      "ui-priority": 0
+    },
+    "search": {
+      "description": "Search / Correlation search",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    }
+  },
+  "description": "Splunk / Splunk ES object",
+  "meta-category": "misc",
+  "name": "splunk",
+  "required": [
+    "search"
+  ],
+  "uuid": "fd9b7bf8-df7b-4df9-bcd8-28591edcaab8",
+  "version": 2
+}

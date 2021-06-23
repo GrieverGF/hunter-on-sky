@@ -1,0 +1,2 @@
+class AuthorizationRequiredException(Exception):
+    pass

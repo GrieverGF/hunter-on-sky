@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "first-seen": {
+      "description": "First time that the linked object or attribute has been seen.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "last-seen": {
+      "description": "First time that the linked object or attribute has been seen.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "precision": {
+      "description": "Timestamp precision represents the precision given to first_seen and/or last_seen in this object.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "minute",
+        "full"
+      ],
+      "ui-priority": 0
+    },
+    "text": {
+      "description": "Description of the time object.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "A generic timestamp object to represent time including first time and last time seen. Relationship will then define the kind of time relationship.",
+  "meta-category": "misc",
+  "name": "timestamp",
+  "requiredOneOf": [
+    "first-seen",
+    "last-seen"
+  ],
+  "uuid": "c8c91e23-4221-4533-8bf7-64e12b05f265",
+  "version": 1
+}

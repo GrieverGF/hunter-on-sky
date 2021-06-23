@@ -1,0 +1,124 @@
+{
+  "attributes": {
+    "bailiwick": {
+      "description": "Best estimate of the apex of the zone where this data is authoritative",
+      "disable_correlation": true,
+      "misp-attribute": "domain",
+      "ui-priority": 0
+    },
+    "count": {
+      "description": "How many authoritative DNS answers were received at the Passive DNS Server's collectors with exactly the given set of values as answers.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "origin": {
+      "description": "Origin of the Passive DNS response. This field is represented as a Uniform Resource Identifier (URI)",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "raw_rdata": {
+      "description": "Resource records of the queried resource, in hexadecimal. *All* rdata entries at once.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "rdata": {
+      "description": "Resource records of the queried resource. Note that this field is added for *each* rdata entry in the rrset.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "rrname": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Resource Record name of the queried resource.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "rrtype": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Resource Record type as seen by the passive DNS.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "A",
+        "AAAA",
+        "CNAME",
+        "PTR",
+        "SOA",
+        "TXT",
+        "DNAME",
+        "NS",
+        "SRV",
+        "RP",
+        "NAPTR",
+        "HINFO",
+        "A6"
+      ],
+      "ui-priority": 1
+    },
+    "sensor_id": {
+      "description": "Sensor information where the record was seen",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "text": {
+      "description": "Description of the passive DNS record.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "time_first": {
+      "description": "First time that the unique tuple (rrname, rrtype, rdata) has been seen by the passive DNS",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "time_first_ms": {
+      "description": "Same meaning as the field 'time_first', with the only difference, that the resolution is in milliseconds since 1st of January 1970 (UTC)",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "time_last": {
+      "description": "Last time that the unique tuple (rrname, rrtype, rdata) record has been seen by the passive DNS",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "time_last_ms": {
+      "description": "Same meaning as the field 'time_last', with the only difference, that the resolution is in milliseconds since 1st of January 1970 (UTC)",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "zone_time_first": {
+      "description": "First time that the unique tuple (rrname, rrtype, rdata) record has been seen via master file import",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "zone_time_last": {
+      "description": "Last time that the unique tuple (rrname, rrtype, rdata) record has been seen via master file import.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    }
+  },
+  "description": "Passive DNS records as expressed in draft-dulaunoy-dnsop-passive-dns-cof-07. See https://tools.ietf.org/id/draft-dulaunoy-dnsop-passive-dns-cof-07.html",
+  "meta-category": "network",
+  "name": "passive-dns",
+  "required": [
+    "rrtype",
+    "rrname",
+    "rdata"
+  ],
+  "uuid": "b77b7b1c-66ab-4a41-8da4-83810f6d2d6c",
+  "version": 5
+}

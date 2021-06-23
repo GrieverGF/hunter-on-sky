@@ -1,0 +1,8 @@
+[console_scripts]
+merge_sigma = sigma.merge_sigma:main
+sigma2attack = sigma.sigma2attack:main
+sigma2misp = sigma.sigma2misp:main
+sigma_similarity = sigma.sigma_similarity:main
+sigma_uuid = sigma.sigma_uuid:main
+sigmac = sigma.sigmac:main
+

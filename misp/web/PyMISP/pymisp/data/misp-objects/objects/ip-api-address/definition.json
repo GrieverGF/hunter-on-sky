@@ -1,0 +1,101 @@
+{
+  "attributes": {
+    "ISP": {
+      "description": "ISP.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "asn": {
+      "description": "Autonomous System Number",
+      "disable_correlation": true,
+      "misp-attribute": "AS",
+      "ui-priority": 1
+    },
+    "city": {
+      "description": "City.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "country": {
+      "description": "Country name",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "country-code": {
+      "description": "Country code ",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "first-seen": {
+      "description": "First time the ASN was seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "ip-src": {
+      "description": "Source IP address of the network connection.",
+      "misp-attribute": "ip-src",
+      "ui-priority": 1
+    },
+    "last-seen": {
+      "description": "Last time the ASN was seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "latitude": {
+      "description": "The latitude is the decimal value of the latitude in the World Geodetic System 84 (WGS84) reference.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 90
+    },
+    "longitude": {
+      "description": "The longitude is the decimal value of the longitude in the World Geodetic System 84 (WGS84) reference",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 89
+    },
+    "organization": {
+      "description": "organization",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "region": {
+      "description": "Region. example: California.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "region-code": {
+      "description": "Region code. example: CA",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "state": {
+      "description": "State.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "zipcode": {
+      "description": "Zip Code.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    }
+  },
+  "description": "IP Address information. Useful if you are pulling your ip information from ip-api.com",
+  "meta-category": "network",
+  "name": "ip-api-address",
+  "requiredOneOf": [
+    "ip-src"
+  ],
+  "uuid": "4336f124-6264-4f72-943e-cc3797e4122b",
+  "version": 2
+}

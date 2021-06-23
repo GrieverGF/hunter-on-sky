@@ -1,0 +1,2 @@
+class UnparsableResponseException(Exception):
+    pass

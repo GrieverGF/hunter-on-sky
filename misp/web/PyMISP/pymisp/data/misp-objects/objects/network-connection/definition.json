@@ -1,0 +1,106 @@
+{
+  "attributes": {
+    "community-id": {
+      "description": "Flow description as a community ID hash value",
+      "misp-attribute": "community-id",
+      "ui-priority": 1
+    },
+    "dst-port": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Destination port of the nework connection.",
+      "misp-attribute": "port",
+      "ui-priority": 1
+    },
+    "first-packet-seen": {
+      "description": "Datetime of the first packet seen.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    },
+    "hostname-dst": {
+      "description": "Destination hostname of the network connection.",
+      "misp-attribute": "hostname",
+      "ui-priority": 1
+    },
+    "hostname-src": {
+      "description": "Source hostname of the network connection.",
+      "misp-attribute": "hostname",
+      "ui-priority": 1
+    },
+    "ip-dst": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Destination IP address of the nework connection.",
+      "misp-attribute": "ip-dst",
+      "ui-priority": 1
+    },
+    "ip-src": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Source IP address of the nework connection.",
+      "misp-attribute": "ip-src",
+      "ui-priority": 1
+    },
+    "layer3-protocol": {
+      "description": "Layer 3 protocol of the network connection.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "IP",
+        "ICMP",
+        "ARP"
+      ],
+      "ui-priority": 0
+    },
+    "layer4-protocol": {
+      "description": "Layer 4 protocol of the network connection.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "TCP",
+        "UDP"
+      ],
+      "ui-priority": 0
+    },
+    "layer7-protocol": {
+      "description": "Layer 7 protocol of the network connection.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "HTTP",
+        "HTTPS",
+        "FTP"
+      ],
+      "ui-priority": 0
+    },
+    "src-port": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Source port of the nework connection.",
+      "misp-attribute": "port",
+      "ui-priority": 1
+    }
+  },
+  "description": "A local or remote network connection.",
+  "meta-category": "network",
+  "name": "network-connection",
+  "requiredOneOf": [
+    "first-packet-seen",
+    "ip-src",
+    "ip-dst",
+    "src-port",
+    "dst-port",
+    "community-id"
+  ],
+  "uuid": "af16764b-f8e5-4603-9de1-de34d272f80b",
+  "version": 3
+}

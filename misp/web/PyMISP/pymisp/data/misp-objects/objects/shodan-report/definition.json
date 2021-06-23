@@ -1,0 +1,70 @@
+{
+  "attributes": {
+    "banner": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "server banner reported",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "hostname": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Hostnames found",
+      "misp-attribute": "domain",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "ip": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "IP Address Queried",
+      "misp-attribute": "ip-dst",
+      "ui-priority": 1
+    },
+    "org": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Associated Organization",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "port": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Listening Port",
+      "misp-attribute": "port",
+      "ui-priority": 1
+    },
+    "text": {
+      "description": "A description of the report",
+      "misp-attribute": "text",
+      "recommended": false,
+      "ui-priority": 1
+    }
+  },
+  "description": "Shodan Report for a given IP",
+  "meta-category": "network",
+  "name": "shodan-report",
+  "required": [
+    "ip"
+  ],
+  "requiredOneOf": [
+    "hostname",
+    "org",
+    "port",
+    "banner"
+  ],
+  "uuid": "10b03d93-3694-4a79-9cd1-4a273746303a",
+  "version": 1
+}

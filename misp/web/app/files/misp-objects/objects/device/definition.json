@@ -1,0 +1,87 @@
+{
+  "attributes": {
+    "MAC-address": {
+      "description": "Device MAC address",
+      "misp-attribute": "mac-address",
+      "ui-priority": 0
+    },
+    "OS": {
+      "description": "OS of the device",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 98
+    },
+    "alias": {
+      "description": "Alias of the Device",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 100
+    },
+    "analysis-date": {
+      "description": "Date of device analysis",
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "attachment": {
+      "description": "An attachment",
+      "misp-attribute": "attachment",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "description": {
+      "description": "Description of the Device",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "device-type": {
+      "description": "Type of the device",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "PC",
+        "Mobile",
+        "Laptop",
+        "HID",
+        "TV",
+        "IoT",
+        "Hardware",
+        "Other"
+      ],
+      "ui-priority": 99
+    },
+    "dns-name": {
+      "description": "Device DNS Name",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "ip-address": {
+      "description": "Device IP address",
+      "misp-attribute": "ip-src",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "name": {
+      "description": "Name of the Device",
+      "misp-attribute": "text",
+      "ui-priority": 101
+    },
+    "version": {
+      "description": "Version of the device/ OS",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 97
+    }
+  },
+  "description": "An object to define a device",
+  "meta-category": "misc",
+  "name": "device",
+  "requiredOneOf": [
+    "name",
+    "alias"
+  ],
+  "uuid": "0c64b41a-e583-4f4d-ac92-d484163b9e52",
+  "version": 7
+}

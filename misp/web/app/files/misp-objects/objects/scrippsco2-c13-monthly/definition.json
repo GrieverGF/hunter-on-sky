@@ -1,0 +1,56 @@
+{
+  "attributes": {
+    "monthly-c13": {
+      "description": "Monthly C13 concentrations in micro-mol C13 per mole (ppm) reported on the 2008A SIO manometric mole fraction scale. This is the standard version of the data most often sought.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "monthly-c13-seasonal-adjustment": {
+      "description": "Same data after a seasonal adjustment to remove the quasi-regular seasonal cycle.  The adjustment involves subtracting from the data a 4-harmonic fit with a linear gain factor.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 0
+    },
+    "monthly-c13-smoothed": {
+      "description": "Smoothed version of the data generated from a stiff cubic spline function plus 4-harmonic functions with linear gain.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "monthly-c13-smoothed-seasonal-adjustment": {
+      "description": "Same smoothed version with the seasonal cycle removed.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-excel": {
+      "description": "M$Excel spreadsheet date format.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-fractional": {
+      "description": "Decimal year and fractional year.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-datetime": {
+      "description": "The monthly values have been adjusted to 24:00 hours on the 15th of each month.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    }
+  },
+  "description": "Monthly average C13 concentrations (ppm) derived from flask air samples.",
+  "meta-category": "climate",
+  "name": "scrippsco2-c13-monthly",
+  "required": [
+    "sample-datetime",
+    "sample-date-excel",
+    "sample-date-fractional"
+  ],
+  "uuid": "812125c7-47de-4503-8bbc-19067d3a1c38",
+  "version": 2
+}

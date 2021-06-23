@@ -1,0 +1,61 @@
+{
+  "attributes": {
+    "attack-type": {
+      "description": "Type of the attack",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "banned-ip": {
+      "description": "IP Address banned by fail2ban",
+      "misp-attribute": "ip-src",
+      "ui-priority": 1
+    },
+    "failures": {
+      "description": "Amount of failures that lead to the ban.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 1
+    },
+    "logfile": {
+      "description": "Full logfile related to the attack.",
+      "disable_correlation": true,
+      "misp-attribute": "attachment",
+      "ui-priority": 1
+    },
+    "logline": {
+      "description": "Example log line that caused the ban.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "processing-timestamp": {
+      "description": "Timestamp of the report",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    },
+    "sensor": {
+      "description": "Identifier of the sensor",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "victim": {
+      "description": "Identifier of the victim",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    }
+  },
+  "description": "Fail2ban event",
+  "meta-category": "network",
+  "name": "fail2ban",
+  "required": [
+    "banned-ip",
+    "processing-timestamp",
+    "attack-type"
+  ],
+  "uuid": "8be2271-7326-41a5-a0dd-9b4bec88e1ba",
+  "version": 5
+}

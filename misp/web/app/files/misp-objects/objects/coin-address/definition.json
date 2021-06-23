@@ -1,0 +1,110 @@
+{
+  "attributes": {
+    "address": {
+      "description": "Bitcoin address used as a payment destination in a cryptocurrency",
+      "misp-attribute": "btc",
+      "ui-priority": 1
+    },
+    "address-xmr": {
+      "description": "Monero address used as a payment destination in a cryptocurrency",
+      "misp-attribute": "xmr",
+      "ui-priority": 1
+    },
+    "current-balance": {
+      "description": "Current balance of address",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "first-seen": {
+      "description": "First time this payment destination address has been seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "last-seen": {
+      "description": "Last time this payment destination address has been seen",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "last-updated": {
+      "description": "Last time the balances and totals have been updated",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "symbol": {
+      "description": "The (uppercase) symbol of the cryptocurrency used. Symbol should be from https://coinmarketcap.com/all/views/all/",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "MIOTA",
+        "DASH",
+        "BTG",
+        "LTC",
+        "ADA",
+        "XMR",
+        "ETC",
+        "NEO",
+        "NEM",
+        "EOS",
+        "XLM",
+        "BCC",
+        "LSK",
+        "OMG",
+        "QTUM",
+        "ZEC",
+        "USDT",
+        "HSR",
+        "STRAT",
+        "WAVES",
+        "PPT",
+        "ETN"
+      ],
+      "ui-priority": 1
+    },
+    "text": {
+      "description": "Free text value",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "total-received": {
+      "description": "Total balance received",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "total-sent": {
+      "description": "Total balance sent",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "total-transactions": {
+      "description": "Total transactions performed",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "recommended": false,
+      "ui-priority": 1
+    }
+  },
+  "description": "An address used in a cryptocurrency",
+  "meta-category": "financial",
+  "name": "coin-address",
+  "requiredOneOf": [
+    "address",
+    "address-xmr"
+  ],
+  "uuid": "d0e6997e-78da-4815-a6a1-cfc1c1cb8a46",
+  "version": 5
+}

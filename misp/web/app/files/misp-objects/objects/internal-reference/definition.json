@@ -1,0 +1,44 @@
+{
+  "attributes": {
+    "comment": {
+      "categories": [
+        "Internal reference"
+      ],
+      "description": "Comment associated to the identifier.",
+      "misp-attribute": "comment",
+      "ui-priority": 0
+    },
+    "identifier": {
+      "categories": [
+        "Internal reference"
+      ],
+      "description": "Identifier of the reference. Should be unique in your system.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "link": {
+      "categories": [
+        "Internal reference"
+      ],
+      "description": "Link associated to the identifier.",
+      "misp-attribute": "link",
+      "ui-priority": 1
+    },
+    "type": {
+      "categories": [
+        "Internal reference"
+      ],
+      "description": "Type of internal reference.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    }
+  },
+  "description": "Internal reference.",
+  "meta-category": "misc",
+  "name": "internal-reference",
+  "required": [
+    "identifier"
+  ],
+  "uuid": "a3984dc5-5f70-4776-9262-c19641c0ff6a",
+  "version": 2
+}

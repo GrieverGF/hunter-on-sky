@@ -1,0 +1,48 @@
+{
+  "attributes": {
+    "datetime": {
+      "categories": [
+        "Other"
+      ],
+      "description": "Datetime",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "signature": {
+      "categories": [
+        "Antivirus detection"
+      ],
+      "description": "Name of detection signature",
+      "misp-attribute": "text",
+      "ui-priority": 2
+    },
+    "software": {
+      "categories": [
+        "Antivirus detection"
+      ],
+      "description": "Name of antivirus software",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "text": {
+      "categories": [
+        "Other"
+      ],
+      "description": "Free text value to attach to the file",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Antivirus detection signature",
+  "meta-category": "misc",
+  "name": "av-signature",
+  "required": [
+    "software",
+    "signature"
+  ],
+  "uuid": "4dbb56ef-4763-4c97-8696-a2bfc305cf8e",
+  "version": 1
+}

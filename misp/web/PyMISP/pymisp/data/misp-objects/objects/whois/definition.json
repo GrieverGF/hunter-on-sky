@@ -1,0 +1,97 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "Comment of the whois entry",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "creation-date": {
+      "description": "Initial creation of the whois entry",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "domain": {
+      "categories": [
+        "Network activity",
+        "External analysis"
+      ],
+      "description": "Domain of the whois entry",
+      "misp-attribute": "domain",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "expiration-date": {
+      "description": "Expiration of the whois entry",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "ip-address": {
+      "description": "IP address of the whois entry",
+      "misp-attribute": "ip-src",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "modification-date": {
+      "description": "Last update of the whois entry",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "nameserver": {
+      "description": "Nameserver",
+      "disable_correlation": true,
+      "misp-attribute": "hostname",
+      "multiple": true,
+      "to_ids": false,
+      "ui-priority": 0
+    },
+    "registrant-email": {
+      "description": "Registrant email address",
+      "misp-attribute": "whois-registrant-email",
+      "ui-priority": 1
+    },
+    "registrant-name": {
+      "description": "Registrant name",
+      "misp-attribute": "whois-registrant-name",
+      "ui-priority": 0
+    },
+    "registrant-org": {
+      "description": "Registrant organisation",
+      "misp-attribute": "whois-registrant-org",
+      "ui-priority": 1
+    },
+    "registrant-phone": {
+      "description": "Registrant phone number",
+      "misp-attribute": "whois-registrant-phone",
+      "ui-priority": 0
+    },
+    "registrar": {
+      "description": "Registrar of the whois entry",
+      "misp-attribute": "whois-registrar",
+      "ui-priority": 0
+    },
+    "text": {
+      "description": "Full whois entry",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    }
+  },
+  "description": "Whois records information for a domain name or an IP address.",
+  "meta-category": "network",
+  "name": "whois",
+  "requiredOneOf": [
+    "registrant-email",
+    "registrant-phone",
+    "creation-date",
+    "registrant-name",
+    "registrar",
+    "text",
+    "domain",
+    "ip-address"
+  ],
+  "uuid": "429faea1-34ff-47af-8a00-7c62d3be5a6a",
+  "version": 10
+}

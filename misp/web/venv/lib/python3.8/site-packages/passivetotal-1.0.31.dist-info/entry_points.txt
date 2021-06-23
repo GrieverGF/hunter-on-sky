@@ -1,0 +1,5 @@
+[console_scripts]
+pt-client = passivetotal.cli.client:main
+pt-config = passivetotal.cli.config:main
+pt-info = passivetotal.cli.info:main
+

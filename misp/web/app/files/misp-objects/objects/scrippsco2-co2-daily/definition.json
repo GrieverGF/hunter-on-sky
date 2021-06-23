@@ -1,0 +1,53 @@
+{
+  "attributes": {
+    "co2-value": {
+      "description": "CO2 value (ppm) - CO2 concentrations are measured on the '08A' Calibration Scale",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "flag": {
+      "description": "Flag (see taxonomy for details).",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "number-flask": {
+      "description": "Number of flasks used in daily average.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 1
+    },
+    "sample-date-excel": {
+      "description": "M$Excel spreadsheet date format.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-fractional": {
+      "description": "Decimal year and fractional year.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-datetime": {
+      "description": "Datetime the sample has been taken",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    }
+  },
+  "description": "Daily average CO2 concentrations (ppm) derived from flask air samples.",
+  "meta-category": "climate",
+  "name": "scrippsco2-co2-daily",
+  "requiredOneOf": [
+    "sample-datetime",
+    "sample-date-excel",
+    "sample-date-fractional",
+    "number-flask",
+    "flag",
+    "co2-value"
+  ],
+  "uuid": "0779baca-06b9-491e-9ab7-ccc3e1538fd3",
+  "version": 2
+}

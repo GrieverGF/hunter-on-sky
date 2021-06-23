@@ -1,0 +1,271 @@
+# Copyright (c) 2017, The MITRE Corporation. All rights reserved.
+# See LICENSE.txt for complete terms.
+
+import unittest
+
+from stix.test import EntityTestCase, assert_warnings
+from stix.test import data_marking_test
+from stix.test.common import related_test, identity_test, kill_chains_test
+from stix.test.extensions.identity import ciq_identity_3_0_test
+
+from stix.core import STIXPackage
+import stix.ttp as ttp
+from stix.ttp import (
+    resource, infrastructure, exploit_targets, malware_instance, exploit,
+    attack_pattern, behavior, victim_targeting
+)
+
+
+class ExploitTargetsTests(EntityTestCase, unittest.TestCase):
+    klass = exploit_targets.ExploitTargets
+
+    _full_dict = {
+        'scope': 'inclusive',
+        'exploit_targets': [
+            related_test.RelatedExploitTargetTests._full_dict
+        ]
+    }
+
+
+class PersonasTests(EntityTestCase, unittest.TestCase):
+    klass = resource.Personas
+
+    _full_dict = [
+        identity_test.IdentityTests._full_dict
+    ]
+
+
+class PersonasWithCIQTests(EntityTestCase, unittest.TestCase):
+    klass = resource.Personas
+
+    _full_dict = [
+        ciq_identity_3_0_test.CIQIdentity3_0InstanceTests._full_dict
+    ]
+
+
+class InfrastructureTests(EntityTestCase, unittest.TestCase):
+    klass = infrastructure.Infrastructure
+
+    _full_dict = {
+        'title': 'Title',
+        'description': 'Description',
+        'short_description': 'Short Description',
+        'types': ['foo', 'bar'],
+        'observable_characterization':  {
+            'cybox_major_version': '2',
+            'cybox_minor_version': '1',
+            'cybox_update_version': '0',
+            'observables': [
+                {
+                    'idref': "example:Observable-1"
+                }
+            ]
+        }
+    }
+
+
+class ResourcesTests(EntityTestCase, unittest.TestCase):
+    klass = ttp.Resource
+
+    _full_dict = {
+        'personas': PersonasTests._full_dict,
+        'tools':  [
+            {
+                'title': "Tool",
+                'type': [
+                    {
+                        'value': 'Malware',
+                        'xsi:type': 'stixVocabs:AttackerToolTypeVocab-1.0'
+                    }
+                ]
+            }
+        ],
+        'infrastructure': InfrastructureTests._full_dict
+    }
+
+
+class MalwareInstanceTests(EntityTestCase, unittest.TestCase):
+    klass = malware_instance.MalwareInstance
+
+    _full_dict = {
+        'id': 'example:test-1',
+        'title': 'Title',
+        'description': 'Description',
+        'short_description': 'Short Description',
+        'types': ['foo', 'bar']
+    }
+
+
+class MalwareInstancesTests(EntityTestCase, unittest.TestCase):
+    klass = behavior.MalwareInstances
+
+    _full_dict = [
+        MalwareInstanceTests._full_dict
+    ]
+
+
+class ExploitTests(EntityTestCase, unittest.TestCase):
+    klass = exploit.Exploit
+
+    _full_dict = {
+        'id': 'example:test-1',
+        'title': 'Title',
+        'description': 'Description',
+        'short_description': 'Short Description',
+    }
+
+
+class ExploitsTests(EntityTestCase, unittest.TestCase):
+    klass = behavior.Exploits
+
+    _full_dict = [
+        ExploitTests._full_dict
+    ]
+
+
+class AttackPatternTests(EntityTestCase, unittest.TestCase):
+    klass = attack_pattern.AttackPattern
+
+    _full_dict = {
+        'id': 'example:test-1',
+        'title': 'Title',
+        'description': 'Description',
+        'short_description': 'Short Description',
+        'capec_id': '12345'
+    }
+
+    def idref_test(self):
+        ap = attack_pattern.AttackPattern()
+        ap.id_ = 'foo'
+
+        self.assertEqual(ap.id_, 'foo')
+
+        ap.idref = 'bar'
+        self.assertEqual(ap.idref, 'bar')
+        self.assertEqual(ap.id_, None)
+
+
+class AttackPatternsTests(EntityTestCase, unittest.TestCase):
+    klass = behavior.AttackPatterns
+
+    _full_dict = [
+        AttackPatternTests._full_dict
+    ]
+
+
+class BehaviorTests(EntityTestCase, unittest.TestCase):
+    klass = behavior.Behavior
+
+    _full_dict = {
+        'malware_instances': MalwareInstancesTests._full_dict,
+        'exploits': ExploitsTests._full_dict,
+        'attack_patterns': AttackPatternsTests._full_dict
+    }
+
+
+class VictimTargetingTests(EntityTestCase, unittest.TestCase):
+    klass = victim_targeting.VictimTargeting
+
+    _full_dict = {
+        'identity': {
+            'specification': {
+                'organisation_info': {
+                    'industry_type': 'Electricity, Industrial Control Systems'
+                }
+            },
+            'xsi:type': 'stix-ciqidentity:CIQIdentity3.0InstanceType'
+        },
+        'targeted_systems': [
+            {
+                'value': 'Industrial Control Systems',
+                'xsi:type': 'stixVocabs:SystemTypeVocab-1.0'
+            }
+        ],
+        'targeted_information': [
+            {
+                'value': 'Information Assets - Intellectual Property',
+                'xsi:type': 'stixVocabs:InformationTypeVocab-1.0'
+            }
+        ],
+        'targeted_technical_details': {
+            'cybox_major_version': '2',
+            'cybox_minor_version': '1',
+            'cybox_update_version': '0',
+            'observables': [
+                {
+                    'idref': "example:Observable-2"
+                }
+            ]
+        }
+    }
+
+
+class TTPTests(EntityTestCase, unittest.TestCase):
+    klass = ttp.TTP
+    _full_dict = {
+        'id': 'example:ttp-1',
+        'version': '1.1',
+        'title': "TTP1",
+        'description': "This is a long description about a ttp",
+        'short_description': "a TTP",
+        'resources': ResourcesTests._full_dict,
+        'handling': data_marking_test.MarkingTests._full_dict,
+        'exploit_targets': ExploitTargetsTests._full_dict,
+        'behavior': BehaviorTests._full_dict,
+        'related_packages': related_test.RelatedPackageRefsTests._full_dict,
+        'kill_chain_phases': kill_chains_test.KillChainPhasesReferenceTests._full_dict,
+        'victim_targeting': VictimTargetingTests._full_dict
+    }
+
+    def test_add_description(self):
+        o1 = self.klass()
+        o2 = self.klass()
+
+        o1.add_description("Test")
+        o2.descriptions.add("Test")
+
+        self.assertEqual(
+            o1.descriptions.to_dict(),
+            o2.descriptions.to_dict()
+        )
+
+    def test_add_short_description(self):
+        o1 = self.klass()
+        o2 = self.klass()
+
+        o1.add_short_description("Test")
+        o2.short_descriptions.add("Test")
+
+        self.assertEqual(
+            o1.short_descriptions.to_dict(),
+            o2.short_descriptions.to_dict()
+        )
+
+    @assert_warnings
+    def test_deprecated_related_packages(self):
+        t = ttp.TTP()
+        t.related_packages.append(STIXPackage())
+        self.assertEqual(len(t.related_packages), 1)
+
+
+class TTPIdentityTests(EntityTestCase, unittest.TestCase):
+    klass = ttp.TTP
+    _full_dict = {
+        "id": "example:ttp-775591f7-7e01-4546-9522-d4211df4aac7",
+        "timestamp": "2016-10-04T19:57:44.446575+00:00",
+        "title": "Victim Targeting: Electricity Sector and Industrial Control System Sector",
+        "victim_targeting": {
+            "identity": {
+                "specification": {
+                    "organisation_info": {
+                        "industry_type": "Electricity, Industrial Control Systems"
+                    }
+                },
+                "xsi:type": "stix-ciqidentity:CIQIdentity3.0InstanceType"
+            }
+        }
+    }
+
+
+if __name__ == "__main__":
+    unittest.main()

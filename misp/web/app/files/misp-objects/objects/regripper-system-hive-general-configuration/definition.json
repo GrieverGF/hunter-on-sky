@@ -1,0 +1,89 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "computer-name": {
+      "description": "name of the computer under analysis",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "fDenyTSConnections:": {
+      "description": "Specifies whether remote connections are enabled or disabled on the system.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "last-write-time": {
+      "description": "Date and time when the key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "shutdown-time": {
+      "description": "Date and time when the system was shutdown.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "timezone-bias": {
+      "description": "Offset in minutes from UTC. Offset added to the local time to get a UTC value.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "timezone-daylight-bias": {
+      "description": "value in minutes to be added to the value of timezone-bias to generate the bias used during daylight time.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "timezone-daylight-date": {
+      "description": "Daylight date - daylight saving months",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "timezone-daylight-name": {
+      "description": "Timezone name used during daylight saving months.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "timezone-last-write-time": {
+      "description": "Date and time when the timezone key was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "timezone-standard-bias": {
+      "description": "value in minutes to be added to the value of timezone-bias to generate the bias used during standard time.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "timezone-standard-date": {
+      "description": "Standard date - non daylight saving months",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "timezone-standard-name": {
+      "description": "Timezone standard name used during non-daylight saving months.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to present general system properties extracted from the system-hive.",
+  "meta-category": "misc",
+  "name": "regripper-system-hive-general-configuration",
+  "required": [
+    "computer-name"
+  ],
+  "uuid": "5ac85401-cbf1-4d05-a85e-1784546881e4",
+  "version": 2
+}

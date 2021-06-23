@@ -1,0 +1,75 @@
+{
+  "attributes": {
+    "first-seen": {
+      "description": "When the paste has been accessible or seen for the first time.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "last-seen": {
+      "description": "When the paste has been accessible or seen for the last time.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "link": {
+      "description": "Link to the original source of the source or post (when used legitimately for OSINT source or alike).",
+      "misp-attribute": "link",
+      "ui-priority": 0
+    },
+    "origin": {
+      "description": "Original source of the paste or post.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0,
+      "values_list": [
+        "pastebin.com",
+        "pastebin.com_pro",
+        "pastebin.fr",
+        "pastie.org",
+        "slexy.org",
+        "gist.github.com",
+        "codepad.org",
+        "safebin.net",
+        "hastebin.com",
+        "ghostbin.com",
+        "paste.ee",
+        "0bin.net"
+      ]
+    },
+    "paste": {
+      "description": "Raw text of the paste or post",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "paste-file": {
+      "description": "Content of the paste in file",
+      "misp-attribute": "attachment",
+      "ui-priority": 0
+    },
+    "title": {
+      "description": "Title of the paste or post.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "url": {
+      "description": "Link to the original source of the paste or post (when used maliciously).",
+      "misp-attribute": "url",
+      "ui-priority": 0
+    },
+    "username": {
+      "description": "User who posted the post.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Paste or similar post from a website allowing to share privately or publicly posts.",
+  "meta-category": "misc",
+  "name": "paste",
+  "requiredOneOf": [
+    "origin",
+    "paste"
+  ],
+  "uuid": "cedc055c-78aa-49a4-bfd7-4cc30cecef12",
+  "version": 6
+}

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: jbxapi
+Version: 3.14.0
+Summary: API for Joe Sandbox
+Home-page: https://github.com/joesecurity/joesandboxcloudapi
+Author: Joe Security LLC
+Author-email: UNKNOWN
+License: MIT
+Keywords: security sandbox joe
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests (<3,>=2.18.4)
+Requires-Dist: pyzipper (>=0.3.1) ; python_version >= "3.5"
+
+UNKNOWN
+
+

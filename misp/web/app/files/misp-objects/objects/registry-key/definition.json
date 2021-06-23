@@ -1,0 +1,102 @@
+{
+  "attributes": {
+    "data": {
+      "categories": [
+        "Persistence mechanism"
+      ],
+      "description": "Data stored in the registry key",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "data-type": {
+      "categories": [
+        "Persistence mechanism"
+      ],
+      "description": "Registry value type",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "REG_NONE",
+        "REG_SZ",
+        "REG_EXPAND_SZ",
+        "REG_BINARY",
+        "REG_DWORD",
+        "REG_DWORD_LITTLE_ENDIAN",
+        "REG_DWORD_BIG_ENDIAN",
+        "REG_LINK",
+        "REG_MULTI_SZ",
+        "REG_RESOURCE_LIST",
+        "REG_FULL_RESOURCE_DESCRIPTOR",
+        "REG_RESOURCE_REQUIREMENTS_LIST",
+        "REG_QWORD",
+        "REG_QWORD_LITTLE_ENDIAN"
+      ],
+      "ui-priority": 0
+    },
+    "hive": {
+      "categories": [
+        "Persistence mechanism"
+      ],
+      "description": "Hive used to store the registry key (file on disk)",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "key": {
+      "categories": [
+        "Persistence mechanism"
+      ],
+      "description": "Full key path",
+      "misp-attribute": "regkey",
+      "ui-priority": 1
+    },
+    "last-modified": {
+      "categories": [
+        "Other"
+      ],
+      "description": "Last time the registry key has been modified",
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "name": {
+      "categories": [
+        "Persistence mechanism"
+      ],
+      "description": "Name of the registry key",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "root-keys": {
+      "description": "Root key of the Windows registry (extracted from the key)",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "HKCC",
+        "HKCR",
+        "HKCU",
+        "HKDD",
+        "HKEY_CLASSES_ROOT",
+        "HKEY_CURRENT_CONFIG",
+        "HKEY_CURRENT_USER",
+        "HKEY_DYN_DATA",
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_PERFORMANCE_DATA",
+        "HKEY_USERS",
+        "HKLM",
+        "HKPD",
+        "HKU"
+      ],
+      "ui-priority": 0
+    }
+  },
+  "description": "Registry key object describing a Windows registry key with value and last-modified timestamp",
+  "meta-category": "file",
+  "name": "registry-key",
+  "requiredOneOf": [
+    "key",
+    "name",
+    "data"
+  ],
+  "uuid": "8b3228ad-6d82-4fe6-b2ae-05426308f1d5",
+  "version": 4
+}

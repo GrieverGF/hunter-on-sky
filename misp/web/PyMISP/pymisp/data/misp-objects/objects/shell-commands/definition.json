@@ -1,0 +1,62 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "Comment associated to the shell commands executed.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "language": {
+      "description": "Scripting language used for the shell commands executed.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "PowerShell",
+        "VBScript",
+        "Bash",
+        "Lua",
+        "JavaScript",
+        "AppleScript",
+        "AWK",
+        "Python",
+        "Perl",
+        "Ruby",
+        "Winbatch",
+        "AutoIt",
+        "PHP"
+      ],
+      "ui-priority": 9
+    },
+    "script": {
+      "description": "Free text of the script if available which executed the shell commands.",
+      "misp-attribute": "text",
+      "ui-priority": 10
+    },
+    "shell-command": {
+      "description": "",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "state": {
+      "description": "Known state of the script.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0,
+      "values_list": [
+        "Malicious",
+        "Unknown",
+        "Harmless",
+        "Trusted"
+      ]
+    }
+  },
+  "description": "Object describing a series of shell commands executed. This object can be linked with malicious files in order to describe a specific execution of shell commands.",
+  "meta-category": "misc",
+  "name": "shell-commands",
+  "required": [
+    "shell-command"
+  ],
+  "uuid": "fee65efa-eb64-4516-8611-1db76c589f79",
+  "version": 2
+}

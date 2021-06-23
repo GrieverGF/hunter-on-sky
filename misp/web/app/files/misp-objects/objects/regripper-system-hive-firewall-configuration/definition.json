@@ -1,0 +1,50 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "Additional comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "disable-notification": {
+      "description": "Boolean flag to determine if firewall notifications are enabled.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "enbled-firewall": {
+      "description": "Boolean flag to determine if the firewall is enabled.",
+      "disable_correlation": true,
+      "misp-attribute": "boolean",
+      "ui-priority": 0
+    },
+    "last-write-time": {
+      "description": "Date and time when the firewall profile policy was last updated.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "profile": {
+      "description": "Firewall Profile type",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "Domain Profile",
+        "Standard Profile",
+        "Network Profile",
+        "Public Profile",
+        "Private Profile",
+        "other"
+      ],
+      "ui-priority": 0
+    }
+  },
+  "description": "Regripper Object template designed to present firewall configuration information extracted from the system-hive.",
+  "meta-category": "misc",
+  "name": "regripper-system-hive-firewall-configuration",
+  "required": [
+    "profile"
+  ],
+  "uuid": "d9839b3c-c013-4ba7-b5e5-2787198b9e07",
+  "version": 1
+}

@@ -1,0 +1,9 @@
+{
+  "description": "Botnet galaxy.",
+  "icon": "sitemap",
+  "name": "Botnet",
+  "namespace": "misp",
+  "type": "botnet",
+  "uuid": "90ccdf38-1649-11e8-b8bf-e7326d553087",
+  "version": 2
+}

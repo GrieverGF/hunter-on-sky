@@ -1,0 +1,81 @@
+{
+  "attributes": {
+    "content-type": {
+      "description": "Content type",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "digest-base64": {
+      "description": "Signature created by the signing certificate’s private key",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "digest_algorithm": {
+      "description": "Algorithm used to hash the file.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "encryption_algorithm": {
+      "description": "Algorithm used to encrypt the digest",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "issuer": {
+      "description": "Issuer of the certificate",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "program-name": {
+      "description": "Program name",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "serial-number": {
+      "description": "Serial number of the certificate",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "signature_algorithm": {
+      "description": "Signature algorithm",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "SHA1_WITH_RSA_ENCRYPTION",
+        "SHA256_WITH_RSA_ENCRYPTION"
+      ],
+      "ui-priority": 0
+    },
+    "text": {
+      "description": "Free text description of the signer info",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "url": {
+      "description": "Url",
+      "misp-attribute": "url",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "version": {
+      "description": "Version of the certificate",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "Authenticode Signer Info",
+  "meta-category": "file",
+  "name": "authenticode-signerinfo",
+  "requiredOneOf": [
+    "url",
+    "program-name",
+    "issuer"
+  ],
+  "uuid": "965cb0aa-baf1-4cc6-9070-68f5c1698c1e",
+  "version": 2
+}

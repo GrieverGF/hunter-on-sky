@@ -1,0 +1,3 @@
+[console_scripts]
+plyara = plyara.command_line:main
+

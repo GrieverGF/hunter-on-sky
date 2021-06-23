@@ -1,0 +1,3 @@
+[console_scripts]
+al-submit = assemblyline_client.submit:main
+

@@ -1,0 +1,3 @@
+[console_scripts]
+yeticli = pyeti.scripts.cli:main
+

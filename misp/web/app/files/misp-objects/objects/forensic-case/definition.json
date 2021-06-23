@@ -1,0 +1,47 @@
+{
+  "attributes": {
+    "additional-comments": {
+      "description": "Comments.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "analysis-start-date": {
+      "description": "Date when the analysis began.",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 0
+    },
+    "case-name": {
+      "description": "Name to address the case.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "case-number": {
+      "description": "Any unique number assigned to the case for unique identification.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "name-of-the-analyst": {
+      "description": "Name(s) of the analyst assigned to the case.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "references": {
+      "description": "External references",
+      "misp-attribute": "link",
+      "multiple": true,
+      "ui-priority": 0
+    }
+  },
+  "description": "An object template to describe a digital forensic case.",
+  "meta-category": "misc",
+  "name": "forensic-case",
+  "requiredOneOf": [
+    "case-number"
+  ],
+  "uuid": "3ea36022-ae93-455e-88b1-d43aca789cac",
+  "version": 1
+}

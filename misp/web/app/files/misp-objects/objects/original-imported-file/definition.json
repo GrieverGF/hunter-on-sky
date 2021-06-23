@@ -1,0 +1,37 @@
+{
+  "attributes": {
+    "format": {
+      "description": "Format of data imported.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "STIX 1.0",
+        "STIX 1.1",
+        "STIX 1.2",
+        "STIX 2.0",
+        "OpenIOC"
+      ],
+      "ui-priority": 1
+    },
+    "imported-sample": {
+      "description": "The original imported file itself (binary).",
+      "disable_correlation": true,
+      "misp-attribute": "attachment",
+      "ui-priority": 1
+    },
+    "uri": {
+      "description": "URI related to the imported file.",
+      "misp-attribute": "uri",
+      "ui-priority": 0
+    }
+  },
+  "description": "Object describing the original file used to import data in MISP.",
+  "meta-category": "file",
+  "name": "original-imported-file",
+  "requiredOneOf": [
+    "imported-sample",
+    "format"
+  ],
+  "uuid": "4cd560e9-2cfe-40a1-9964-7b2e797ecac5",
+  "version": 2
+}

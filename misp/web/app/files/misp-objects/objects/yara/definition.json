@@ -1,0 +1,49 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "A description of the YARA rule.",
+      "misp-attribute": "comment",
+      "ui-priority": 0
+    },
+    "context": {
+      "description": "Context where the YARA rule can be applied",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "all",
+        "disk",
+        "memory",
+        "network"
+      ],
+      "ui-priority": 0
+    },
+    "version": {
+      "description": "Version of the YARA rule depending where the yara rule is known to work as expected.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "3.7.1"
+      ],
+      "ui-priority": 0
+    },
+    "yara": {
+      "description": "YARA rule.",
+      "misp-attribute": "yara",
+      "ui-priority": 0
+    },
+    "yara-rule-name": {
+      "description": "YARA rule name.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "An object describing a YARA rule (or a YARA rule name) along with its version.",
+  "meta-category": "misc",
+  "name": "yara",
+  "requiredOneOf": [
+    "yara",
+    "yara-rule-name"
+  ],
+  "uuid": "b5acf82e-ecca-4868-82fe-9dbdf4d808c3",
+  "version": 5
+}

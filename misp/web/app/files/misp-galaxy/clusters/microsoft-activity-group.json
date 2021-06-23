@@ -1,0 +1,303 @@
+{
+  "authors": [
+    "Various"
+  ],
+  "category": "actor",
+  "description": "Activity groups as described by Microsoft",
+  "name": "Microsoft Activity Group actor",
+  "source": "MISP Project",
+  "type": "microsoft-activity-group",
+  "uuid": "28b5e55d-acba-4748-a79d-0afa3512689a",
+  "values": [
+    {
+      "description": "PROMETHIUM is an activity group that has been active as early as 2012. The group primarily uses Truvasys, a first-stage malware that has been in circulation for several years. Truvasys has been involved in several attack campaigns, where it has masqueraded as one of server common computer utilities, including WinUtils, TrueCrypt, WinRAR, or SanDisk. In each of the campaigns, Truvasys malware evolved with additional features—this shows a close relationship between the activity groups behind the campaigns and the developers of the malware.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2016/12/14/twin-zero-day-attacks-promethium-and-neodymium-target-individuals-in-europe/"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "efed95ba-d7e8-47ff-8c53-99c42426ee7c",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        },
+        {
+          "dest-uuid": "43894e2a-174e-4931-94a8-2296afe8f650",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "5744f91a-d2d8-4f92-920f-943dd80c578f",
+      "value": "PROMETHIUM"
+    },
+    {
+      "description": "NEODYMIUM is an activity group that is known to use a backdoor malware detected by Microsoft as Wingbird. This backdoor’s characteristics closely match FinFisher, a government-grade commercial surveillance package. Data about Wingbird activity indicate that it is typically used to attack individual computers instead of networks.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2016/12/14/twin-zero-day-attacks-promethium-and-neodymium-target-individuals-in-europe/"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "025bdaa9-897d-4bad-afa6-013ba5734653",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        },
+        {
+          "dest-uuid": "ada08ea8-4517-4eea-aff1-3ad69e5466bb",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "47b5007a-3fb1-466a-9578-629e6e735493",
+      "value": "NEODYMIUM"
+    },
+    {
+      "description": "Microsoft Threat Intelligence identified similarities between this recent attack and previous 2012 attacks against tens of thousands of computers belonging to organizations in the energy sector. Microsoft Threat Intelligence refers to the activity group behind these attacks as TERBIUM, following our internal practice of assigning rogue actors chemical element names.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2016/12/09/windows-10-protection-detection-and-response-against-recent-attacks/"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "46670c51-fea4-45d6-bdd4-62e85a5c7404",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "99784b80-6298-45ba-885c-0ed37bfd8324",
+      "value": "TERBIUM"
+    },
+    {
+      "description": "STRONTIUM has been active since at least 2007. Whereas most modern untargeted malware is ultimately profit-oriented, STRONTIUM mainly seeks sensitive information. Its primary institutional targets have included government bodies, diplomatic institutions, and military forces and installations in NATO member states and certain Eastern European countries. Additional targets have included journalists, political advisors, and organizations associated with political activism in central Asia. STRONTIUM is an activity group that usually targets government agencies, diplomatic institutions, and military organizations, as well as affiliated private sector organizations such as defense contractors and public policy research institutes. Microsoft has attributed more 0-day exploits to STRONTIUM than any other tracked group in 2016. STRONTIUM frequently uses compromised e-mail accounts from one victim to send malicious e-mails to a second victim and will persistently pursue specific targets for months until they are successful in compromising the victims’ computer. ",
+      "meta": {
+        "country": "RU",
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2016/11/01/our-commitment-to-our-customers-security/",
+          "http://download.microsoft.com/download/4/4/C/44CDEF0E-7924-4787-A56A-16261691ACE3/Microsoft_Security_Intelligence_Report_Volume_19_A_Profile_Of_A_Persistent_Adversary_English.pdf",
+          "https://blogs.technet.microsoft.com/mmpc/2015/11/16/microsoft-security-intelligence-report-strontium/",
+          "https://blogs.microsoft.com/on-the-issues/2018/08/20/we-are-taking-new-steps-against-broadening-threats-to-democracy/",
+          "https://www.bleepingcomputer.com/news/security/microsoft-disrupts-apt28-hacking-campaign-aimed-at-us-midterm-elections/"
+        ],
+        "synonyms": [
+          "APT 28",
+          "APT28",
+          "Pawn Storm",
+          "Fancy Bear",
+          "Sednit",
+          "TsarTeam",
+          "TG-4127",
+          "Group-4127",
+          "Sofacy",
+          "Grey-Cloud"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "bef4c620-0787-42a8-a96d-b7eb6e85917c",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        },
+        {
+          "dest-uuid": "5b4ee3ea-eee3-4c8e-8323-85ae32658754",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "213cdde9-c11a-4ea9-8ce0-c868e9826fec",
+      "value": "STRONTIUM"
+    },
+    {
+      "description": "DUBNIUM (which shares indicators with what Kaspersky researchers have called DarkHotel) is one of the activity groups that has been very active in recent years, and has many distinctive features.",
+      "meta": {
+        "refs": [
+          "https://securelist.com/blog/research/71713/darkhotels-attacks-in-2015/",
+          "https://blogs.technet.microsoft.com/mmpc/2016/06/09/reverse-engineering-dubnium-2",
+          "https://blogs.technet.microsoft.com/mmpc/2016/06/20/reverse-engineering-dubniums-flash-targeting-exploit/",
+          "https://blogs.technet.microsoft.com/mmpc/2016/07/14/reverse-engineering-dubnium-stage-2-payload-analysis/"
+        ],
+        "synonyms": [
+          "darkhotel"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "b8c8b96d-61e6-47b1-8e38-fd8ad5d9854d",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "b56af6ab-69f8-457a-bf50-c3aefa6dc14a",
+      "value": "DUBNIUM"
+    },
+    {
+      "description": "PLATINUM has been targeting its victims since at least as early as 2009, and may have been active for several years prior. Its activities are distinctly different not only from those typically seen in untargeted attacks, but from many targeted attacks as well. A large share of targeted attacks can be characterized as opportunistic: the activity group changes its target profiles and attack geographies based on geopolitical seasons, and may attack institutions all over the world. Like many such groups, PLATINUM seeks to steal sensitive intellectual property related to government interests, but its range of preferred targets is consistently limited to specific governmental organizations, defense institutes, intelligence agencies, diplomatic institutions, and telecommunication providers in South and Southeast Asia. The group’s persistent use of spear phishing tactics (phishing attempts aimed at specific individuals) and access to previously undiscovered zero-day exploits have made it a highly resilient threat.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2016/04/26/digging-deep-for-platinum/",
+          "http://download.microsoft.com/download/2/2/5/225BFE3E-E1DE-4F5B-A77B-71200928D209/Platinum%20feature%20article%20-%20Targeted%20attacks%20in%20South%20and%20Southeast%20Asia%20April%202016.pdf"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "f9c06633-dcff-48a1-8588-759e7cec5694",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        },
+        {
+          "dest-uuid": "1fc5671f-5757-43bf-8d6d-a9a93b03713a",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "154e97b5-47ef-415a-99a6-2157f1b50339",
+      "value": "PLATINUM"
+    },
+    {
+      "description": "Microsoft Threat Intelligence associates Winnti with multiple activity groups—collections of malware, supporting infrastructure, online personas, victimology, and other attack artifacts that the Microsoft intelligent security graph uses to categorize and attribute threat activity. Microsoft labels activity groups using code names derived from elements in the periodic table. In the case of this malware, the activity groups strongly associated with Winnti are BARIUM and LEAD. But even though they share the use of Winnti, the BARIUM and LEAD activity groups are involved in very different intrusion scenarios.  BARIUM begins its attacks by cultivating relationships with potential victims—particularly those working in Business Development or Human Resources—on various social media platforms. Once BARIUM has established rapport, they spear-phish the victim using a variety of unsophisticated malware installation vectors, including malicious shortcut (.lnk) files with hidden payloads, compiled HTML help (.chm) files, or Microsoft Office documents containing macros or exploits. Initial intrusion stages feature the Win32/Barlaiy implant—notable for its use of social network profiles, collaborative document editing sites, and blogs for C&C. Later stages of the intrusions rely upon Winnti for persistent access. The majority of victims recorded to date have been in electronic gaming, multimedia, and Internet content industries, although occasional intrusions against technology companies have occurred.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2017/01/25/detecting-threat-actors-in-recent-german-industrial-attacks-with-windows-defender-atp/"
+        ]
+      },
+      "uuid": "cc70bdbd-afa7-4e19-bba2-2443811ef3af",
+      "value": "BARIUM"
+    },
+    {
+      "description": "In contrast, LEAD has established a far greater reputation for industrial espionage. In the past few years, LEAD’s victims have included: Multinational, multi-industry companies involved in the manufacture of textiles, chemicals, and electronics Pharmaceutical companies A company in the chemical industry University faculty specializing in aeronautical engineering and research A company involved in the design and manufacture of motor vehicles A cybersecurity company focusing on protecting industrial control systems During these intrusions, LEAD’s objective was to steal sensitive data, including research materials, process documents, and project plans. LEAD also steals code-signing certificates to sign its malware in subsequent attacks.  In most cases, LEAD’s attacks do not feature any advanced exploit techniques. The group also does not make special effort to cultivate victims prior to an attack. Instead, the group often simply emails a Winnti installer to potential victims, relying on basic social engineering tactics to convince recipients to run the attached malware. In some other cases, LEAD gains access to a target by brute-forcing remote access login credentials, performing SQL injection, or exploiting unpatched web servers, and then they copy the Winnti installer directly to compromised machines.",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2017/01/25/detecting-threat-actors-in-recent-german-industrial-attacks-with-windows-defender-atp/"
+        ]
+      },
+      "uuid": "f542442e-ba0f-425d-b386-6c10351a468e",
+      "value": "LEAD"
+    },
+    {
+      "description": "In addition to strengthening generic detection of EoP exploits, Microsoft security researchers are actively gathering threat intelligence and indicators attributable to ZIRCONIUM, the activity group using the CVE-2017-0005 exploit. ",
+      "meta": {
+        "refs": [
+          "https://blogs.technet.microsoft.com/mmpc/2017/03/27/detecting-and-mitigating-elevation-of-privilege-exploit-for-cve-2017-0005/"
+        ]
+      },
+      "uuid": "2d19c573-252b-49d8-8c2e-3b529b91e72d",
+      "value": "ZIRCONIUM"
+    },
+    {
+      "description": "This threat actor uses social engineering and spear phishing to target military and defense organizations in India, for the purpose of espionage.",
+      "meta": {
+        "cfr-suspected-state-sponsor": "Pakistan",
+        "cfr-suspected-victims": [
+          "India"
+        ],
+        "cfr-target-category": [
+          "Government",
+          "Private sector"
+        ],
+        "cfr-type-of-incident": "Espionage",
+        "refs": [
+          "https://www.cfr.org/interactive/cyber-operations/mythic-leopard"
+        ],
+        "synonyms": [
+          "C-Major",
+          "Transparent Tribe"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "acbb5cad-ffe7-4b0e-a57a-2dbc916e8905",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "2a410eea-a9da-11e8-b404-37b7060746c8",
+      "value": "https://www.cfr.org/interactive/cyber-operations/mythic-leopard"
+    },
+    {
+      "description": "Microsoft Threat Intelligence Center (MSTIC) is raising awareness of the ongoing activity by a group we call GALLIUM, targeting telecommunication providers. When Microsoft customers have been targeted by this activity, we notified them directly with the relevant information they need to protect themselves. By sharing the detailed methodology and indicators related to GALLIUM activity, we’re encouraging the security community to implement active defenses to secure the broader ecosystem from these attacks.\nTo compromise targeted networks, GALLIUM target unpatched internet-facing services using publicly available exploits and have been known to target vulnerabilities in WildFly/JBoss. Once persistence is established in a network, GALLIUM uses common techniques and tools like Mimikatz to obtain credentials that allows for lateral movement across the target network. Within compromised networks, GALLIUM makes no attempt to obfuscate their intent and are known to use common versions of malware and publicly available toolkits with small modifications. The operators rely on low cost and easy to replace infrastructure that consists of dynamic-DNS domains and regularly reused hop points.\nThis activity from GALLIUM has been identified predominantly through 2018 to mid-2019. GALLIUM is still active; however, activity levels have dropped when compared to what was previously observed.",
+      "meta": {
+        "refs": [
+          "https://www.microsoft.com/security/blog/2019/12/12/gallium-targeting-global-telecom/"
+        ],
+        "synonyms": [
+          "Operation Soft Cell"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "8dda51ef-9a30-48f7-b0fd-5b6f0a62262d",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "similar"
+        }
+      ],
+      "uuid": "6085aad0-1d95-11ea-a140-078d42aced40",
+      "value": "GALLIUM"
+    },
+    {
+      "description": "One actor that has emerged in this trend of human-operated attacks is an active, highly adaptive group that frequently drops Wadhrama as payload.\n PARINACOTA impacts three to four organizations every week and appears quite resourceful: during the 18 months that we have been monitoring it, we have observed the group change tactics to match its needs and use compromised machines for various purposes, including cryptocurrency mining, sending spam emails, or proxying for other attacks. The group’s goals and payloads have shifted over time, influenced by the type of compromised infrastructure, but in recent months, they have mostly deployed the Wadhrama ransomware.\nThe group most often employs a smash-and-grab method, whereby they attempt to infiltrate a machine in a network and proceed with subsequent ransom in less than an hour. There are outlier campaigns in which they attempt reconnaissance and lateral movement, typically when they land on a machine and network that allows them to quickly and easily move throughout the environment.\nPARINACOTA’s attacks typically brute forces their way into servers that have Remote Desktop Protocol (RDP) exposed to the internet, with the goal of moving laterally inside a network or performing further brute-force activities against targets outside the network. This allows the group to expand compromised infrastructure under their control. Frequently, the group targets built-in local administrator accounts or a list of common account names. In other instances, the group targets Active Directory (AD) accounts that they compromised or have prior knowledge of, such as service accounts of known vendors.\nThe group adopted the RDP brute force technique that the older ransomware called Samas (also known as SamSam) infamously used. Other malware families like GandCrab, MegaCortext, LockerGoga, Hermes, and RobbinHood have also used this method in targeted ransomware attacks. PARINACOTA, however, has also been observed to adapt to any path of least resistance they can utilize. For instance, they sometimes discover unpatched systems and use disclosed vulnerabilities to gain initial access or elevate privileges.",
+      "meta": {
+        "refs": [
+          "https://www.microsoft.com/security/blog/2020/03/05/human-operated-ransomware-attacks-a-preventable-disaster/"
+        ]
+      },
+      "related": [
+        {
+          "dest-uuid": "42148074-196b-4f8c-b149-12163fc385fa",
+          "tags": [
+            "estimative-language:likelihood-probability=\"likely\""
+          ],
+          "type": "uses"
+        }
+      ],
+      "uuid": "00edb40d-2fed-4d36-98b1-c85fc2bb1168",
+      "value": "PARINACOTA"
+    },
+    {
+      "description": "GADOLINIUM is a nation-state activity group that has been compromising targets for nearly a decade with a worldwide focus on the maritime and health industries. As with most threat groups, GADOLINIUM tracks the tools and techniques of security practitioners looking for new techniques they can use or modify to create new exploit methods.\nHistorically, GADOLINIUM used custom-crafted malware families that analysts can identify and defend against. In response, over the last year GADOLINIUM has begun to modify portions of its toolchain to use open-source toolkits to obfuscate their activity and make it more difficult for analysts to track. Because cloud services frequently offer a free trial or one-time payment (PayGo) account offerings, malicious actors have found ways to take advantage of these legitimate business offerings. By establishing free or PayGo accounts, they can use cloud-based technology to create a malicious infrastructure that can be established quickly then taken down before detection or given up at little cost.",
+      "meta": {
+        "refs": [
+          "https://www.microsoft.com/security/blog/2020/09/24/gadolinium-detecting-empires-cloud/"
+        ]
+      },
+      "uuid": "99e708f7-1c01-467d-b0da-f6cebd434abc",
+      "value": "GADOLINIUM"
+    },
+    {
+      "description": "HAFNIUM primarily targets entities in the United States across a number of industry sectors, including infectious disease researchers, law firms, higher education institutions, defense contractors, policy think tanks, and NGOs.  HAFNIUM has previously compromised victims by exploiting vulnerabilities in internet-facing servers, and has used legitimate open-source frameworks, like Covenant, for command and control. Once they’ve gained access to a victim network, HAFNIUM typically exfiltrates data to file sharing sites like MEGA.  In campaigns unrelated to these vulnerabilities, Microsoft has observed HAFNIUM interacting with victim Office 365 tenants. While they are often unsuccessful in compromising customer accounts, this reconnaissance activity helps the adversary identify more details about their targets’ environments.  HAFNIUM operates primarily from leased virtual private servers (VPS) in the United States.",
+      "meta": {
+        "refs": [
+          "https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/"
+        ]
+      },
+      "uuid": "fbb66d6c-0faa-49cc-8aa3-2f9bd4e9c298",
+      "value": "HAFNIUM"
+    }
+  ],
+  "version": 10
+}

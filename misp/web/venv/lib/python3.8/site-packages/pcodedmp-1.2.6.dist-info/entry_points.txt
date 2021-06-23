@@ -1,0 +1,3 @@
+[console_scripts]
+pcodedmp = pcodedmp.pcodedmp:main
+

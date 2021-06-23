@@ -1,0 +1,143 @@
+{
+  "attributes": {
+    "alias": {
+      "description": "Alias name or known as.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "charges": {
+      "description": "Charges published as provided by requesting entity",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "colour-of-eyes": {
+      "description": "Description of a person's colour of eyes.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "colour-of-hair": {
+      "description": "Description of a person's colour of hair.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "date-of-birth": {
+      "description": "Date of birth of a natural person (in YYYY-MM-DD format).",
+      "misp-attribute": "date-of-birth",
+      "ui-priority": 0
+    },
+    "date-of-disappearance": {
+      "description": "Date of disappearance of a missing person.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "distinguishing-marks-and-characteristics": {
+      "description": "Distinguishing marks and characteristics of a person.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "father-s-family-name-&-forename": {
+      "description": "Father's family name & forename.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "forename": {
+      "description": "First name of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "first-name",
+      "ui-priority": 0
+    },
+    "height": {
+      "description": "Height of a person.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "language-spoken": {
+      "description": "Languages spoken by a person.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "mother-s-family-name-&-forename": {
+      "description": "Mother's family name & forename.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "nationality": {
+      "description": "The nationality of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "nationality",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "notice-color": {
+      "description": "The color/type of the notice",
+      "misp-attribute": "text",
+      "sane_default": [
+        "Red",
+        "Yellow",
+        "Blue",
+        "Black",
+        "Green",
+        "Orange",
+        "Purple"
+      ],
+      "ui-priority": 1
+    },
+    "place-of-birth": {
+      "description": "Place of birth of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "place-of-birth",
+      "ui-priority": 0
+    },
+    "place-of-disappearance": {
+      "description": "Place of birth of a natural person.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "portrait": {
+      "description": "Portrait of the person.",
+      "misp-attribute": "attachment",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "present-family-name": {
+      "description": "Last name of a natural person.",
+      "misp-attribute": "last-name",
+      "ui-priority": 0
+    },
+    "sex": {
+      "description": "The gender of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "gender",
+      "ui-priority": 0,
+      "values_list": [
+        "Male",
+        "Female",
+        "Other",
+        "Prefer not to say"
+      ]
+    },
+    "weight": {
+      "description": "weight of a person.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0
+    }
+  },
+  "description": "An object which describes a Interpol notice.",
+  "meta-category": "misc",
+  "name": "interpol-notice",
+  "required": [
+    "notice-color"
+  ],
+  "uuid": "24927972-1e4a-11e9-857e-3b2306b99911",
+  "version": 1
+}

@@ -1,0 +1,56 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "A description of the regular expression.",
+      "misp-attribute": "comment",
+      "ui-priority": 0
+    },
+    "regexp": {
+      "description": "regexp",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "regexp-type": {
+      "description": "Type of the regular expression syntax.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 0,
+      "values_list": [
+        "PCRE",
+        "PCRE2",
+        "POSIX BRE",
+        "POSIX ERE",
+        "FCRE (Farsight Compatible Regular Expressions)"
+      ]
+    },
+    "type": {
+      "description": "Specify which type corresponds to this regex.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "sane_default": [
+        "hostname",
+        "domain",
+        "email-src",
+        "email-dst",
+        "email-subject",
+        "url",
+        "user-agent",
+        "regkey",
+        "cookie",
+        "uri",
+        "filename",
+        "windows-service-name",
+        "windows-scheduled-task"
+      ],
+      "ui-priority": 0
+    }
+  },
+  "description": "An object describing a regular expression (regex or regexp). The object can be linked via a relationship to other attributes or objects to describe how it can be represented as a regular expression.",
+  "meta-category": "misc",
+  "name": "regexp",
+  "requiredOneOf": [
+    "regexp"
+  ],
+  "uuid": "ceffad66-71e5-4e20-9370-1b3fb694c648",
+  "version": 5
+}

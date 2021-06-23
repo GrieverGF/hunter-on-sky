@@ -1,0 +1,26 @@
+{
+  "description": "Office 365 URLs and IP address ranges used for their attack simulator in Office 365 Threat Intelligence",
+  "list": [
+    "52.168.52.134",
+    "portal.docdeliveryapp.com",
+    "portal.docdeliveryapp.net",
+    "portal.docstoreinternal.com",
+    "portal.hardwarecheck.net",
+    "portal.hrsupportint.com",
+    "portal.payrolltooling.com",
+    "portal.payrolltooling.net",
+    "portal.prizegiveaway.net",
+    "portal.prizesforall.com",
+    "securescore-user-prod.cloudapp.net"
+  ],
+  "matching_attributes": [
+    "ip-src",
+    "ip-dst",
+    "domain",
+    "domain|ip",
+    "hostname"
+  ],
+  "name": "List of known Office 365 Attack Simulator used for phishing awareness campaigns",
+  "type": "substring",
+  "version": 20180711
+}

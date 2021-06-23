@@ -1,0 +1,53 @@
+{
+  "attributes": {
+    "c13-value": {
+      "description": "C13 value (ppm) - C13 concentrations are measured on the '08A' Calibration Scale",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "flag": {
+      "description": "Flag (see taxonomy for details).",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 0
+    },
+    "number-flask": {
+      "description": "Number of flasks used in daily average.",
+      "disable_correlation": true,
+      "misp-attribute": "counter",
+      "ui-priority": 1
+    },
+    "sample-date-excel": {
+      "description": "M$Excel spreadsheet date format.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-date-fractional": {
+      "description": "Decimal year and fractional year.",
+      "disable_correlation": true,
+      "misp-attribute": "float",
+      "ui-priority": 1
+    },
+    "sample-datetime": {
+      "description": "Datetime the sample has been taken",
+      "disable_correlation": true,
+      "misp-attribute": "datetime",
+      "ui-priority": 1
+    }
+  },
+  "description": "Daily average C13 concentrations (ppm) derived from flask air samples.",
+  "meta-category": "climate",
+  "name": "scrippsco2-c13-daily",
+  "requiredOneOf": [
+    "sample-datetime",
+    "sample-date-excel",
+    "sample-date-fractional",
+    "number-flask",
+    "flag",
+    "c13-value"
+  ],
+  "uuid": "5f71a99e-4a56-45b5-b7d6-19949d22409a",
+  "version": 2
+}

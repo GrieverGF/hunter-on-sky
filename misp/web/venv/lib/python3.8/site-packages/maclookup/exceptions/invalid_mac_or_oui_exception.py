@@ -1,0 +1,2 @@
+class InvalidMacOrOuiException(Exception):
+    pass

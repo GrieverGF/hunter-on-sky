@@ -1,0 +1,203 @@
+{
+  "attributes": {
+    "address": {
+      "description": "Postal address of the person.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "alias": {
+      "description": "Alias name or known as.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 97
+    },
+    "birth-certificate-number": {
+      "description": "Birth Certificate Number",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "date-of-birth": {
+      "description": "Date of birth of a natural person (in YYYY-MM-DD format).",
+      "misp-attribute": "date-of-birth",
+      "ui-priority": 0
+    },
+    "dni": {
+      "description": "Spanish National ID",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "e-mail": {
+      "description": "Email address of the person.",
+      "misp-attribute": "email-src",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "fax-number": {
+      "description": "Fax number of the person.",
+      "misp-attribute": "phone-number",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "first-name": {
+      "description": "First name of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "first-name",
+      "ui-priority": 98
+    },
+    "full-name": {
+      "description": "Full name of a natural person usually composed of first-name, middle-name and last-name.",
+      "misp-attribute": "full-name",
+      "ui-priority": 100
+    },
+    "gender": {
+      "description": "The gender of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "gender",
+      "ui-priority": 0,
+      "values_list": [
+        "Male",
+        "Female",
+        "Other",
+        "Prefer not to say",
+        "Unknown"
+      ]
+    },
+    "identity-card-number": {
+      "description": "The identity card number of a natural person.",
+      "misp-attribute": "identity-card-number",
+      "ui-priority": 0
+    },
+    "last-name": {
+      "description": "Last name of a natural person.",
+      "misp-attribute": "last-name",
+      "ui-priority": 100
+    },
+    "middle-name": {
+      "description": "Middle name of a natural person.",
+      "misp-attribute": "middle-name",
+      "ui-priority": 99
+    },
+    "mothers-name": {
+      "description": "Mother name, father, second name or other names following country's regulation.",
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "nationality": {
+      "description": "The nationality of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "nationality",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "nic-hdl": {
+      "description": "NIC Handle (Network Information Centre handle) of the person.",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "nie": {
+      "description": "Foreign National ID (Spain)",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "nif": {
+      "description": "Tax ID Number (Spain)",
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "ofac-identification-number": {
+      "description": "ofac-identification Number",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "passport-country": {
+      "description": "The country in which the passport was issued.",
+      "disable_correlation": true,
+      "misp-attribute": "passport-country",
+      "ui-priority": 0
+    },
+    "passport-expiration": {
+      "description": "The expiration date of a passport.",
+      "disable_correlation": true,
+      "misp-attribute": "passport-expiration",
+      "ui-priority": 0
+    },
+    "passport-number": {
+      "description": "The passport number of a natural person.",
+      "misp-attribute": "passport-number",
+      "ui-priority": 0
+    },
+    "phone-number": {
+      "description": "Phone number of the person.",
+      "misp-attribute": "phone-number",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "place-of-birth": {
+      "description": "Place of birth of a natural person.",
+      "disable_correlation": true,
+      "misp-attribute": "place-of-birth",
+      "ui-priority": 0
+    },
+    "portrait": {
+      "description": "Portrait of the person.",
+      "misp-attribute": "attachment",
+      "multiple": true,
+      "ui-priority": 10
+    },
+    "redress-number": {
+      "description": "The Redress Control Number is the record identifier for people who apply for redress through the DHS Travel Redress Inquiry Program (DHS TRIP). DHS TRIP is for travelers who have been repeatedly identified for additional screening and who want to file an inquiry to have erroneous information corrected in DHS systems.",
+      "misp-attribute": "redress-number",
+      "ui-priority": 0
+    },
+    "role": {
+      "description": "The role of a person.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0,
+      "values_list": [
+        "Suspect",
+        "Victim",
+        "Defendent",
+        "Accused",
+        "Culprit",
+        "Accomplice",
+        "Witness",
+        "Target"
+      ]
+    },
+    "social-security-number": {
+      "description": "Social security number.",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "text": {
+      "description": "A description of the person or identity.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 1
+    },
+    "title": {
+      "description": "Title of the natural person such as Dr. or equivalent.",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "ui-priority": 101
+    }
+  },
+  "description": "An object which describes a person or an identity.",
+  "meta-category": "misc",
+  "name": "person",
+  "requiredOneOf": [
+    "first-name",
+    "last-name",
+    "full-name",
+    "alias"
+  ],
+  "uuid": "a15b0477-e9d1-4b9c-9546-abe78a4f4248",
+  "version": 11
+}

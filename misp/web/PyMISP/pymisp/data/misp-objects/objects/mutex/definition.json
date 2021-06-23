@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "description": {
+      "description": "Description",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "name": {
+      "description": "name of the mutex",
+      "misp-attribute": "text",
+      "ui-priority": 0
+    },
+    "operating-system": {
+      "description": "Operating system where the mutex has been seen",
+      "misp-attribute": "text",
+      "sane_default": [
+        "Windows",
+        "Unix"
+      ],
+      "ui-priority": 0
+    }
+  },
+  "description": "Object to describe mutual exclusion locks (mutex) as seen in memory or computer program",
+  "meta-category": "misc",
+  "name": "mutex",
+  "requiredOneOf": [
+    "name"
+  ],
+  "uuid": "9f5c1a68-2021-4faa-b409-61c899c86466",
+  "version": 1
+}
