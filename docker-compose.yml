@@ -40,7 +40,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 
   web:
-    build: misp/web
+    build: misp/build
     depends_on:
       - db
     container_name: misp_web
