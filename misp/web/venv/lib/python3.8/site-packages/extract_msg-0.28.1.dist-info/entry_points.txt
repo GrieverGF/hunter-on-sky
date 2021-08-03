@@ -1,3 +1,0 @@
-[console_scripts]
-extract_msg = extract_msg.__main__:main
-

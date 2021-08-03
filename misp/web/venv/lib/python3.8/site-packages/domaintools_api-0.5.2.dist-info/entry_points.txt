@@ -1,3 +1,0 @@
-[console_scripts]
-domaintools = domaintools.cli:run
-

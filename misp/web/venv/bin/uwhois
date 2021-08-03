@@ -1,7 +1,0 @@
-#!/var/www/MISP/venv/bin/python
-# EASY-INSTALL-DEV-SCRIPT: 'uwhois==0.5','uwhois'
-__requires__ = 'uwhois==0.5'
-__import__('pkg_resources').require('uwhois==0.5')
-__file__ = '/var/www/MISP/venv/src/uwhois/client/bin/uwhois'
-with open(__file__) as f:
-    exec(compile(f.read(), __file__, 'exec'))

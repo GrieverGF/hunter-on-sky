@@ -1,7 +1,0 @@
-#!/var/www/MISP/venv/bin/python
-# EASY-INSTALL-DEV-SCRIPT: 'pybgpranking==0.1','bgpranking'
-__requires__ = 'pybgpranking==0.1'
-__import__('pkg_resources').require('pybgpranking==0.1')
-__file__ = '/var/www/MISP/venv/src/pybgpranking/client/bin/bgpranking'
-with open(__file__) as f:
-    exec(compile(f.read(), __file__, 'exec'))

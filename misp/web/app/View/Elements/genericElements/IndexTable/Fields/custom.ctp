@@ -1,1 +1,0 @@
-<?= $field['function']($row);
