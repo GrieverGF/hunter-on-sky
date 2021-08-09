@@ -39,6 +39,8 @@ RUN apt update && apt -y install software-properties-common && \
     p7zip-full \
     pkg-config && \
   rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install libusb-1.0-0 
+
 
 # Make Tmp Dir
 RUN mkdir ~/tmp_build
@@ -80,15 +82,22 @@ RUN groupadd -r viper && \
 # Clean tmp_build
 RUN rm -rf ~/tmp_build
 
-USER viper
-WORKDIR /home/viper
-RUN git clone -b v${VIPER_VERSION} https://github.com/botherder/viper.git && \
-  mkdir /home/viper/workdir
+
+# Install Viper-Web
 
 USER root
-WORKDIR /home/viper/viper
-RUN pip3 install viper-framework
+WORKDIR /home/viper
+RUN git clone https://github.com/viper-framework/viper-web.git
+RUN sed -i 's/MarkupSafe==1.1.1/MarkupSafe>=2.0/g' viper-web/requirements.txt
+RUN pip3 install viper-framework 
+RUN git clone https://github.com/viper-framework/viper-modules.git /home/viper/.viper/modules
+RUN pip3 install -U -r /home/viper/.viper/modules/requirements.txt
+RUN viper
+RUN cd /home/viper/viper-web && python3 setup.py install
+RUN chown -R viper:viper /home/viper/.viper
+COPY docker-entrypoint.sh /home/viper/viper-web/docker-entrypoint.sh 
+
 
 USER viper
-WORKDIR /home/viper/workdir
-CMD ["viper","update-modules"]
+WORKDIR /home/viper/viper-web
+CMD ["sh","docker-entrypoint.sh"]

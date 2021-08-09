@@ -11,6 +11,8 @@ services:
       nofile:
         soft: 65536
         hard: 65536
+    volumes: 
+      - ${ELASTIC_DATA}:/var
   cortex:
     image: thehiveproject/cortex:latest
     depends_on:
@@ -32,7 +34,7 @@ services:
     image: mysql/mysql-server:5.7
     restart: unless-stopped
     volumes:
-      - ${DATA_DIR}/db:/var/lib/mysql
+      - ${DATA_DIR}:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
@@ -63,7 +65,8 @@ services:
       - POSTFIX_RELAY_HOST=${POSTFIX_RELAY_HOST}
       - TIMEZONE=${TIMEZONE}
 
-
   viper:
     build: viper
+    ports:
+      - "0.0.0.0:8000:8000"
   
