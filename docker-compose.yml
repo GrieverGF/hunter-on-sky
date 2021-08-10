@@ -3,10 +3,12 @@ version: "3"
 #TheHive & Cortex
 services:
   elasticsearch:
+    container_name: elasticdb
     image: elasticsearch:7.13.2
     environment:
       - http.host=0.0.0.0
       - discovery.type=single-node
+    mem_limit: 1024m
     ulimits:
       nofile:
         soft: 65536
@@ -14,20 +16,28 @@ services:
     volumes: 
       - ${ELASTIC_DATA}:/var
   cortex:
+    container_name: cortex
     image: thehiveproject/cortex:latest
     depends_on:
       - elasticsearch
     ports:
       - "0.0.0.0:9001:9001"
+    mem_limit: 1024m
+    command: --no-config
+    volumes:
+      -  ${CORTEX_CONFIG}/:/etc/cortex/
   thehive:
+    container_name: thehive
     image: thehiveproject/thehive:latest
     depends_on:
       - elasticsearch
       - cortex
     ports:
       - "0.0.0.0:9000:9000"
-    command: --cortex-port 9001
-
+    mem_limit: 1024m
+    command: --no-config
+    volumes:
+      - ${THEHIVE_CONFIG}/:/etc/thehive/
 #MISP
   db:
     container_name: misp_db
@@ -35,6 +45,7 @@ services:
     restart: unless-stopped
     volumes:
       - ${DATA_DIR}:/var/lib/mysql
+    mem_limit: 512m
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
@@ -54,6 +65,7 @@ services:
     volumes:
       - /dev/urandom:/dev/random
       - ${WEB_DIR}:/var/www/MISP
+    mem_limit: 512m
     environment:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
@@ -68,5 +80,6 @@ services:
   viper:
     build: viper
     ports:
-      - "0.0.0.0:8000:8000"
+      - "0.0.0.0:8080:8080"
+    mem_limit: 512m
   
