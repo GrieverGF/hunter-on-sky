@@ -3,7 +3,7 @@ version: "3.8"
 #TheHive & Cortex
 services:
   elasticsearch:
-    image: 'elasticsearch:7.11.1'
+    image: 'elasticsearch:7.13.1'
     container_name: elasticsearch
     restart: unless-stopped
     ports:
@@ -46,15 +46,20 @@ services:
   thehive:
     image: 'thehiveproject/thehive4:latest'
     container_name: 'thehive4'
+    restart: unless-stopped
+    depends_on:
+      - elasticsearch
+      - cortex
     ports:
       - '0.0.0.0:9000:9000'
+    links: 
+      - elasticsearch
+      - cortex  
     volumes:
       - './thehive/application.conf:/etc/thehive/application.conf'
       - './thehive/db:/opt/thp/thehive/db'
       - './thehive/data:/opt/thp/thehive/data'
       - './thehive/index:/opt/thp/thehive/index'
-    networks:
-      - default
     command: '--no-config --no-config-secret'
 
 ## n8n
