@@ -3,30 +3,16 @@ version: "3.8"
 #TheHive & Cortex
 services:
   elasticsearch:
-    image: 'elasticsearch:7.13.1'
+    image: 'grievergf/elasticsearch4cortex'
     container_name: elasticsearch
     restart: unless-stopped
     ports:
       - '0.0.0.0:9200:9200'
-    environment:
-      - http.host=0.0.0.0
-      - discovery.type=single-node
-      - cluster.name=hive
-      - script.allowed_types= inline
-      - thread_pool.search.queue_size=100000
-      - thread_pool.write.queue_size=10000
-      - gateway.recover_after_nodes=1
-      - xpack.security.enabled=false
-      - bootstrap.memory_lock=true
-      - ES_JAVA_OPTS=-Xms256m -Xmx256m
     ulimits:
       nofile:
         soft: 65536
         hard: 65536
-    volumes:
-      - './elasticsearch/data:/usr/share/elasticsearch/data'
-      - './elasticsearch/logs:/usr/share/elasticsearch/logs'
-  
+    mem_limit: 1024m
   cortex:
     image: 'thehiveproject/cortex:latest'
     container_name: cortex
@@ -43,6 +29,7 @@ services:
       - elasticsearch
     ports:
       - '0.0.0.0:9001:9001'
+    mem_limit: 1024m  
   thehive:
     image: 'thehiveproject/thehive4:latest'
     container_name: 'thehive4'
@@ -61,14 +48,13 @@ services:
       - './thehive/data:/opt/thp/thehive/data'
       - './thehive/index:/opt/thp/thehive/index'
     command: '--no-config --no-config-secret'
-
-
-
+    mem_limit: 1024m
 #MISP
   redis:
     image: redis:latest
     container_name: redis
     restart: unless-stopped
+    mem_limit: 512m
   db:
     image: mysql:latest
     container_name: db
@@ -82,7 +68,7 @@ services:
       - "MYSQL_DATABASE=misp"
     volumes:
       - ./misp/data:/var/lib/mysql
-
+    mem_limit: 512m
   misp:
     image: coolacid/misp-docker:core-latest
     container_name: misp
@@ -99,7 +85,7 @@ services:
       - "INIT=true"             # Initialze MISP, things includes, attempting to import SQL and the Files DIR
       - "CRON_USER_ID=1"        # The MISP user ID to run cron jobs as
       - "DISIPV6=true" # Disable IPV6 in nginx
-
+    mem_limit: 512m
   misp-modules:
     image: coolacid/misp-docker:modules-latest
     container_name: misp-modules
@@ -108,6 +94,7 @@ services:
     depends_on:
       - redis
       - db
+    mem_limit: 512m
 ## Viper
   viper:
     image: grievergf/viper
