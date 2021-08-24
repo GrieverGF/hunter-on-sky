@@ -110,7 +110,8 @@ services:
       - db
 ## Viper
   viper:
-    build: viper
+    image: grievergf/viper
+    container_name: viper
     ports:
       - "0.0.0.0:8080:8080"
     mem_limit: 512m
