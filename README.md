@@ -1,5 +1,5 @@
 
-
+for link thehive and cortex run the script scripts/update_key_hive2cortex
 
 
 ## Default access
