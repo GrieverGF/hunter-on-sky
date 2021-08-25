@@ -1,5 +1,6 @@
 
-for link thehive and cortex run the script scripts/update_key_hive2cortex
+for link thehive and cortex run the script scripts/update_key_cortex2hive.sh
+for link thehive and misp run the script scripts/update_key_misp2cortex.sh
 
 
 ## Default access
