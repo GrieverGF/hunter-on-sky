@@ -6,13 +6,14 @@ services:
     image: 'grievergf/elasticsearch4cortex'
     container_name: elasticsearch
     restart: unless-stopped
-    ports:
-      - '0.0.0.0:9200:9200'
     ulimits:
       nofile:
         soft: 65536
         hard: 65536
     mem_limit: 2048m
+    volumes:
+      - ./vol/elasticsearch_data:/usr/share/elasticsearch/data
+      - ./vol/elasticsearch_logs:/usr/share/elasticsearch/logs
   cortex:
     image: 'thehiveproject/cortex:latest'
     container_name: cortex
@@ -44,9 +45,9 @@ services:
       - cortex  
     volumes:
       - './thehive/application.conf:/etc/thehive/application.conf'
-      - './thehive/db:/opt/thp/thehive/db'
-      - './thehive/data:/opt/thp/thehive/data'
-      - './thehive/index:/opt/thp/thehive/index'
+      - './vol/thehive/db:/opt/thp/thehive/db'
+      - './vol/thehive/data:/opt/thp/thehive/data'
+      - './vol/thehive/index:/opt/thp/thehive/index'
     command: '--no-config --no-config-secret'
     mem_limit: 1024m
 #MISP
@@ -60,13 +61,14 @@ services:
     container_name: db
     restart: unless-stopped
     command: --default-authentication-plugin=mysql_native_password
-    restart: unless-stopped
     environment:
       - "MYSQL_USER=misp"
       - "MYSQL_PASSWORD=example"
       - "MYSQL_ROOT_PASSWORD=password"
       - "MYSQL_DATABASE=misp"
     mem_limit: 512m
+    volumes:
+      - ./vol/mysql:/var/lib/mysql
   misp:
     image: coolacid/misp-docker:core-latest
     container_name: misp
