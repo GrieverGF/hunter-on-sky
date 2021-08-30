@@ -4,9 +4,6 @@ MYSQL_USER=misp
 MYSQL_PASSWORD=misp
 MYSQL_ROOT_PASSWORD=misp
 
-MISP_ADMIN_EMAIL=temp@email
-MISP_ADMIN_PASSPHRASE=changeme
-MISP_BASEURL=localhost
 
 POSTFIX_RELAY_HOST=relay.fqdn
 TIMEZONE=America/Bogota
@@ -14,7 +11,7 @@ TIMEZONE=America/Bogota
 DATA_DIR=./misp/data
 WEB_DIR=./misp/web
 
+COMPOSE_PROJECT_NAME=hunter-on-sky
 
-ELASTIC_DATA=./elastic_data
 
-THEHIVE_CONFIG=./thehive/application.conf
+JOB_DIRECTORY=/opt/cortex/jobs
