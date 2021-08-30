@@ -11,9 +11,6 @@ services:
         soft: 65536
         hard: 65536
     mem_limit: 2048m
-    volumes:
-      - ./vol/elasticsearch_data:/usr/share/elasticsearch/data
-      - ./vol/elasticsearch_logs:/usr/share/elasticsearch/logs
   cortex:
     image: 'thehiveproject/cortex:latest'
     container_name: cortex
@@ -23,9 +20,9 @@ services:
     environment:
       - 'JOB_DIRECTORY=${JOB_DIRECTORY}'
     volumes:
-      - './cortex/application.conf:/etc/cortex/application.conf'
-      - '${JOB_DIRECTORY}:${JOB_DIRECTORY}'
-      - '/var/run/docker.sock:/var/run/docker.sock'
+      - ./cortex/application.conf:/etc/cortex/application.conf
+      - ${JOB_DIRECTORY}:${JOB_DIRECTORY}
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - elasticsearch
     ports:
@@ -44,10 +41,10 @@ services:
       - elasticsearch
       - cortex  
     volumes:
-      - './thehive/application.conf:/etc/thehive/application.conf'
-      - './vol/thehive/db:/opt/thp/thehive/db'
-      - './vol/thehive/data:/opt/thp/thehive/data'
-      - './vol/thehive/index:/opt/thp/thehive/index'
+      - ./thehive/application.conf:/etc/thehive/application.conf
+      - ./vol/thehive/db:/opt/thp/thehive/db
+      - ./vol/thehive/data:/opt/thp/thehive/data
+      - ./vol/thehive/index:/opt/thp/thehive/index
     command: '--no-config --no-config-secret'
     mem_limit: 1024m
 #MISP
