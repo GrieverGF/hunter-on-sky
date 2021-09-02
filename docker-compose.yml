@@ -66,7 +66,7 @@ services:
       - "MYSQL_ROOT_HOST=172.*.*.*"
     mem_limit: 512m
     volumes:
-      - ./vol/mysql:/var/lib/mysql
+      - ./vol/mysql:/var/lib/mysql:rw,delegated
   misp:
     image: coolacid/misp-docker:core-latest
     container_name: misp
