@@ -78,7 +78,7 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - "HOSTNAME=https://localhost"
+      - 'HOSTNAME=$MISP_URL_BASE'
       - "REDIS_FQDN=redis"
       - "INIT=true"             # Initialze MISP, things includes, attempting to import SQL and the Files DIR
       - "CRON_USER_ID=1"        # The MISP user ID to run cron jobs as

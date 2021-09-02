@@ -4,6 +4,7 @@ MYSQL_USER=misp
 MYSQL_PASSWORD=misp
 MYSQL_ROOT_PASSWORD=misp
 
+MISP_URL_BASE=localhost
 
 POSTFIX_RELAY_HOST=relay.fqdn
 TIMEZONE=America/Bogota
